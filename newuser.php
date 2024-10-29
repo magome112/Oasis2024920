@@ -14,6 +14,6 @@
 
     <input type="submit" value="新規作成">
 
-    <input type="radio" name="gesugu"
+    <input type="radio" name="gesugu">
 </body>
 </html>
