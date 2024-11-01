@@ -13,8 +13,8 @@
     <h3><input type="text" name="u_password"></h3>
     <input type="submit" value="次に進む">
     <br>
-    <input type="radio" name="guest/new">　ゲストでログイン
-    <input type="radio" name="guest/new">　アカウント新規作成
+    <input type="radio" name="guest/newuser" value="guest">　ゲストでログイン
+    <input type="radio" name="guest/newuser" value="newuser">S　アカウント新規作成
 
 
 </body>
