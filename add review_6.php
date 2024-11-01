@@ -18,6 +18,6 @@
 
     <p><h5>コメント(必須)</h5> <textarea rows="4" cols="5"></textarea></p>
 
-    <h5>画像アップロード(任意)</h5><!--画像アップロードのコード-->
+    <h5>画像アップロード(任意)</h5><input type="file" name="upload" accept="image/">
 </body>
 </html>
