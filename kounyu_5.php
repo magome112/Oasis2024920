@@ -15,6 +15,7 @@
         <option value = "US">America</option>
         <option value = "UK">United Kingdom</option>
     </select>
+    <br>
     氏名
     <br>
     <input type="text" name="purchaser_name">
