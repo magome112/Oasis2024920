@@ -6,6 +6,7 @@
     <title>レビュー記入</title>
 </head>
 <body>
+    <form action="./review_7.php" method="post">
     <img src="">
     <hr>
 
@@ -18,6 +19,7 @@
 
     <p><h5>コメント(必須)</h5> <textarea rows="4" cols="5"></textarea></p>
 
-    <h5>画像アップロード(任意)</h5><input type="file" name="upload" accept="image/">
+    <h5>画像アップロード(任意)</h5><input type="file" name="upload" accept="image/*">
+    </form>
 </body>
 </html>
