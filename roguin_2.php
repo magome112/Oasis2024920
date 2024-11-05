@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン</title>
+    <title>login</title>
 </head>
 <body>
-    <img src="">
-    <hr>
+    <p><h3><input type="radio" name="login">ログイン</h3></p>
+    <p><h4>メールアドレスまたは電話番号</h4></p>
+    <h3><input type="text" name="u_mail"></h3>
+    <h3>パスワードを入力</h3>
+    <h3><input type="text" name="u_password"></h3>
+    <input type="submit" value="次に進む">
+    <br>
+    <input type="radio" name="guest/newuser" value="guest">　ゲストでログイン
+    <input type="radio" name="guest/newuser" value="newuser">S　アカウント新規作成
 
-    <input type="radio" name="login" value="ログイン">
-    <p>メールアドレスまたは電話番号</p>
-    <input type="text" name="mail">
 
-    <p>パスワードを入力</p>
-    <input type="text" name="pass">
-
-    <input type="radio" name="guestlog" value="ゲストでログイン">
-    <input type="radio" name="newuser" value="アカウント新規作成">
-    <a href="./kanri.roguin_10.php">管理者ログイン</a>
 </body>
 </html>
