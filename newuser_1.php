@@ -7,6 +7,7 @@
 </head>
 <body>
     <form action="./home_3.php" method="post">
+        <input type="search" name="search">
         <img src="">
         <hr>
         
