@@ -10,7 +10,7 @@
     <form action="./home_3.php" method="post">
         <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
         <hr>
-        <input type="radio" name="new" value="new" class="radio">アカウント新規作成
+        <p class="p-center"><input type="radio" name="new" value="new">アカウント新規作成</p>
 
             <p class="p-center">メールアドレスまたは電話番号</p>
             <input type="text" name="mail" class="textbox">
