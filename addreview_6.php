@@ -17,7 +17,7 @@
                     <input type="radio" name="star" value="2">
                     <input type="radio" name="star" value="1"></p>
 
-    <p><h5>コメント(必須)</h5> <textarea rows="4" cols="5"></textarea></p>
+    <p><h5>コメント(必須)</h5> <textarea rows="5" cols="50"></textarea></p>
 
     <h5>画像アップロード(任意)</h5><input type="file" name="upload" accept="image/*">
     </form>
