@@ -19,5 +19,6 @@
     <input type="radio" name="guest">ゲストでログイン
     <input type="radio" name="login">ログイン
     
+    
 </body>
 </html>
