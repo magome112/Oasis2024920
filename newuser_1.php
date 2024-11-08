@@ -14,10 +14,10 @@
                 <p><input type="radio" name="new" value="new">アカウント新規作成</p>
             
                 <p>メールアドレスまたは電話番号</p>
-                <input type="text" name="mail" class="textbox">
+                <input type="text" name="mail">
 
                 <p>新しいパスワードを入力</p>
-                <input type="text" name="password" class="textbox">
+                <input type="text" name="password">
 
                 <p><input type="submit" value="新規作成"></p>
             </div>
