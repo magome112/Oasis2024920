@@ -8,7 +8,7 @@
 <body>
     <form action="./home_3.php" method="post">
         <input type="search" name="search">
-        <img src="./images/oasislogo.jpg">
+        <img src="./images/oasislogo.jpg" width="300" height="200">
         <hr>
 
         <h2>海外</h2>
