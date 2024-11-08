@@ -6,8 +6,8 @@
     <title>レビュー記入</title>
 </head>
 <body>
-    <form action="./review_7.php" method="post">
-    <img src="">
+    <form action="./review_7.php" method="post" enctype="multipart/form-data">
+    <img src="./images/oasislogo.jpg">
     <hr>
 
     <h1>レビューの記入</h1>
