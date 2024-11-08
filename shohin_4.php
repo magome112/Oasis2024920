@@ -1,24 +1,3 @@
-<?php
-// データベース接続情報
-$host = 'localhost';
-$dbname = 'ecommerce';
-$username = 'LAA1553845';
-$password = 'pass1234';
-
-try {
-    // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // 商品を取得
-    $stmt = $pdo->query("SELECT * FROM products");
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-} catch (PDOException $e) {
-    echo "データベース接続エラー: " . $e->getMessage();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
