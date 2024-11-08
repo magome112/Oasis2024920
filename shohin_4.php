@@ -1,7 +1,7 @@
 <?php
 // データベース接続情報
 $host = 'localhost';
-$dbname = 'ecommerce';
+$dbname = 'LAA1553845-2024php';
 $username = 'LAA1553845';
 $password = 'pass1234';
 
