@@ -5,6 +5,10 @@
 .center{
     text-align: center;
 }
+.radio-center{
+    display: flex;
+    justify-content: center;  
+}
 .radio-center p{
     display: inline-flex;
     align-items: center;
