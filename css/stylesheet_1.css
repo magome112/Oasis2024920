@@ -8,6 +8,7 @@
 .radio-center{
     display: flex;
     justify-content: center;
+    gap: 15px;
 }
 .textbox{
     display: block;
