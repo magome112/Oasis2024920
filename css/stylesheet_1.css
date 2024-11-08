@@ -6,6 +6,7 @@
     text-align: center;
 }
 .radio-center{
+    display: flex;
     text-align: center;
 }
 .textbox{
