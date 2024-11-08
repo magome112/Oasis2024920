@@ -49,5 +49,17 @@ $password = 'pass1234';
     <input type="radio" name="payment" value="R_pay">R_payの画像
     
 </fieldset>
+
+<fieldset>
+
+    
+
+    <input type="checkbox" name="kiyaku">利用規約に同意する
+    
+    <form action="home_3.php" method="post">
+        <input type="submit" value="購入する">
+    </form>
+
+</fieldset>
 </body>
 </html>
