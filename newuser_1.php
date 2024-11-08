@@ -7,8 +7,7 @@
 </head>
 <body>
     <form action="./home_3.php" method="post">
-        <input type="search" name="search">
-        <img src="">
+        <img src="./images/oasislogo.jpg">
         <hr>
         
         <input type="radio" name="new" value="アカウント新規作成">
@@ -20,7 +19,7 @@
         <input type="submit" value="新規作成">
 
         <input type="radio" name="guest" value="ゲストでログイン">
-        <input type="radio" name="roguin" value="ログイン">
+        <input type="radio" name="rogin" value="ログイン">
     </form>
 </body>
 </html>
