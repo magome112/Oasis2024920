@@ -1,4 +1,7 @@
 .img-side{
-    display: inline-block;
-    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.img-side img{
+    display: block;
 }

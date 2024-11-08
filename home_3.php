@@ -14,16 +14,16 @@
 
         <h2>海外</h2>
         <div class="img-side">
-            <img src="./images/eberesuto.jpg" width="200" height="100"><br>エベレスト
-            <img src="./images/kannchenjunnga.jpg" width="200" height="100"><br>カンチェンジュンガ
-            <img src="./images/manasuru.jpg" width="200" height="100"><br>マナスル
+            <img src="./images/eberesuto.jpg" width="200" height="100">
+            <img src="./images/kannchenjunnga.jpg" width="200" height="100">
+            <img src="./images/manasuru.jpg" width="200" height="100">
         </div>
 
         <h2>国内</h2>
         <div class="img-side">
-            <img src="./images/hujisan.jpg" width="200" height="100"><br>富士山
-            <img src="./images/hodaka.jpg" width="200" height="100"><br>穂高岳
-            <img src="./images/sakurajima.jpg" width="200" height="100"><br>桜島
+            <img src="./images/hujisan.jpg" width="200" height="100">
+            <img src="./images/hodaka.jpg" width="200" height="100">
+            <img src="./images/sakurajima.jpg" width="200" height="100">
         </div>
 
         <img src="./images/oasislogo.jpg" width="200" height="100">
