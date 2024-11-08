@@ -1,16 +1,3 @@
-<?php
-// データベース接続情報
-$host = 'localhost';
-$dbname = 'ecommerce';
-$username = 'LAA1553845';
-$password = 'pass1234';
-
-
-    // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -25,9 +12,9 @@ $password = 'pass1234';
     <p>新しいパスワードを入力</p>
     <input type="text" name="password">
 
-        <input type="submit" value="新規作成">
+    <input type="submit" value="新規作成">
 
     <input type="radio" name="guest">
-    iiiiii
+    
 </body>
 </html>
