@@ -8,20 +8,20 @@
 <body>
     <form action="./home_3.php" method="post">
         <input type="search" name="search">
-        <img src="./images/oasislogo.jpg" width="300" height="200">
+        <img src="./images/oasislogo.jpg" width="200" height="100">
         <hr>
 
         <h2>海外</h2>
-        <img src="./images/eberesuto.jpg"><br>エベレスト
-        <img src="./images/kannchenjunnga.jpg"><br>カンチェンジュンガ
-        <img src="./images/manasuru.jpg"><br>マナスル
+        <img src="./images/eberesuto.jpg" width="200" height="100"><br>エベレスト
+        <img src="./images/kannchenjunnga.jpg" width="200" height="100"><br>カンチェンジュンガ
+        <img src="./images/manasuru.jpg" width="200" height="100"><br>マナスル
 
         <h2>国内</h2>
-        <img src="./images/hujisan.jpg"><br>富士山
-        <img src="./images/hodaka.jpg"><br>穂高岳
-        <img src="./images/sakurajima.jpg"><br>桜島
+        <img src="./images/hujisan.jpg" width="200" height="100"><br>富士山
+        <img src="./images/hodaka.jpg" width="200" height="100"><br>穂高岳
+        <img src="./images/sakurajima.jpg" width="200" height="100"><br>桜島
 
-        <img src="./images/oasislogo.jpg">
+        <img src="./images/oasislogo.jpg" width="200" height="100">
         <a href="./kounyurireki_8.php">購入履歴</a>
     </form>
 </body>
