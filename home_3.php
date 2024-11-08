@@ -14,16 +14,34 @@
 
         <h2>海外</h2>
         <div class="img-side">
-            <img src="./images/eberesuto.jpg" width="200" height="100">
-            <img src="./images/kannchenjunnga.jpg" width="200" height="100">
-            <img src="./images/manasuru.jpg" width="200" height="100">
+            <div class="img-item">
+                <img src="./images/eberesuto.jpg" width="200" height="100">
+                <p>エベレスト</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/kannchenjunnga.jpg" width="200" height="100">
+                <p>カンチェンジュンガ</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/manasuru.jpg" width="200" height="100">
+                <p>マナスル</p>
+            </div>
         </div>
 
         <h2>国内</h2>
         <div class="img-side">
-            <img src="./images/hujisan.jpg" width="200" height="100">
-            <img src="./images/hodaka.jpg" width="200" height="100">
-            <img src="./images/sakurajima.jpg" width="200" height="100">
+            <div class="img-item">
+                <img src="./images/hujisan.jpg" width="200" height="100">
+                <p>富士山</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/hodaka.jpg" width="200" height="100">
+                <p>穂高岳</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/sakurajima.jpg" width="200" height="100">
+                <p>桜島</p>
+            </div>
         </div>
 
         <img src="./images/oasislogo.jpg" width="200" height="100">
