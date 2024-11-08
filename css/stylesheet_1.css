@@ -5,7 +5,7 @@
 .center{
     text-align: center;
 }
-.radio-center{
+.radio-center p{
     display: inline-flex;
     align-items: center;
     margin: 0;
