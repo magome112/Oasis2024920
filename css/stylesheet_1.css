@@ -2,13 +2,12 @@
     display: block;
     margin: auto; 
 }
-.p-center{
+.center{
     text-align: center;
 }
 .radio-center{
     display: flex;
     justify-content: center;
-    gap: 15px;
 }
 .textbox{
     display: block;
