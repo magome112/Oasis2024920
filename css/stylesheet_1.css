@@ -2,14 +2,10 @@
     display: block;
     margin: auto; 
 }
-.p{
+.p-center{
     text-align: center;
 }
 .textbox{
-    display: block;
-    margin: auto;
-}
-.radio{
     display: block;
     margin: auto;
 }
