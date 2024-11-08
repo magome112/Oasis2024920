@@ -16,10 +16,10 @@ $password = 'pass1234';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ホーム</title>
 </head>
 <body>
-    <form action="./home_3.php" method="post">
+    <form action="./shohin_4.php" method="post">
         <input type="search" name="search">
         <img src="./images/oasislogo.jpg" width="200" height="100">
         <hr>
