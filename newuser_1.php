@@ -10,7 +10,7 @@
     <form action="./home_3.php" method="post">
         <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
         <hr>
-        <p class="p-center"><input type="radio" name="new" value="new">アカウント新規作成</p>
+        <p class="radio-center"><input type="radio" name="new" value="new">アカウント新規作成</p>
 
             <p class="p-center">メールアドレスまたは電話番号</p>
             <input type="text" name="mail" class="textbox">
@@ -20,8 +20,8 @@
 
         <p class="p-center"><input type="submit" value="新規作成"></p>
 
-        <p class="p-center"><input type="radio" name="guest" value="guest">ゲストでログイン</p>
-        <p class="p-center"><input type="radio" name="login" value="login">ログイン</p>
+        <p class="radio-center"><input type="radio" name="guest" value="guest">ゲストでログイン</p>
+        <p class="radio-center"><input type="radio" name="login" value="login">ログイン</p>
     
     </form>
 </body>

@@ -5,7 +5,11 @@
 .p-center{
     text-align: center;
 }
+.radio-center{
+    text-align: center;
+}
 .textbox{
     display: block;
     margin: auto;
 }
+
