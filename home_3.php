@@ -8,7 +8,7 @@
 <body>
     <form action="./home_3.php" method="post">
         <input type="search" name="search">
-        <img src="C:\Users\m1i2k\OneDrive - 学校法人 麻生塾\Oasis画像\oasis.jpg">
+        <img src="./images/oasislogo.jpg">
         <hr>
 
 </body>
