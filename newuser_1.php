@@ -12,16 +12,16 @@
         <hr>
         <input type="radio" name="new" value="new" class="radio">アカウント新規作成
 
-            <p class="p">メールアドレスまたは電話番号</p>
+            <p class="p-center">メールアドレスまたは電話番号</p>
             <input type="text" name="mail" class="textbox">
 
-            <p class="p">新しいパスワードを入力</p>
+            <p class="p-center">新しいパスワードを入力</p>
             <input type="text" name="password" class="textbox">
 
-        <p class="p"><input type="submit" value="新規作成"></p>
+        <p class="p-center"><input type="submit" value="新規作成"></p>
 
-        <input type="radio" name="guest" value="guest" class="radio">ゲストでログイン
-        <input type="radio" name="login" value="login" class="radio">ログイン
+        <p class="p-center"><input type="radio" name="guest" value="guest">ゲストでログイン</p>
+        <p class="p-center"><input type="radio" name="login" value="login">ログイン</p>
     
     </form>
 </body>
