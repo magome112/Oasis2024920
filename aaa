@@ -1,0 +1,22 @@
+<h2>海外</h2>
+            <div class="img-side">
+                <div class="img-item">
+                    <img src="./images/eberesuto.jpg" width="200" height="100">
+                    <p>エベレスト</p>
+                </div>
+                <div class="img-item">
+                    <img src="./images/kannchenjunnga.jpg" width="200" height="100">
+                    <p>カンチェンジュンガ</p>
+                </div>
+                <div class="img-item">
+                    <img src="./images/manasuru.jpg" width="200" height="100">
+                    <p>マナスル</p>
+                </div>
+                <div class="img-item">
+                    <img src="./images/mattahorun.jpg" width="200" height="100">
+                    <p>マッターホルン</p>
+                </div>
+                <div class="img-item">
+                    <img src="./images/kirimanjaro.jpg" width="200" height="100">
+                    <p>キリマンジャロ</p>
+                </div>

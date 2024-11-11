@@ -8,35 +8,39 @@
 </head>
 <body>
     <form action="_4_shohin.php" method="post">
-        <div class="header-img">
+    <div class="header-img">
             <input type="search" name="search">
             <img src="./images/oasislogo.jpg" width="100" height="50">
         </div>
         <hr>
 
-        <h2>海外</h2>
-            <div class="img-side">
-                <div class="img-item">
-                    <img src="./images/eberesuto.jpg" width="200" height="100">
-                    <p>エベレスト</p>
-                </div>
-                <div class="img-item">
-                    <img src="./images/kannchenjunnga.jpg" width="200" height="100">
-                    <p>カンチェンジュンガ</p>
-                </div>
-                <div class="img-item">
-                    <img src="./images/manasuru.jpg" width="200" height="100">
-                    <p>マナスル</p>
-                </div>
-                <div class="img-item">
-                    <img src="./images/mattahorun.jpg" width="200" height="100">
-                    <p>マッターホルン</p>
-                </div>
-                <div class="img-item">
-                    <img src="./images/kirimanjaro.jpg" width="200" height="100">
-                    <p>キリマンジャロ</p>
-                </div>
-                <button id="scroll" class="scroll-btn">></button><!--画像スクロールと「＞」を右に寄せる-->
+        <?php
+        $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+        dbname=LAA1602729-oasis;charset=utf8',
+        'LAA1602729',
+        'oasis5');
+
+        $sql1 = "SELECT 'yama_img' FROM 'Oasis_yama' WHERE 'Region' = 1 ";
+        $result1 = $pdo->query($sql);
+        $rowCount = $result1->rowCount();
+
+        if($rowCount > 0){
+            echo '<h2>海外</h2>';
+            echo '<div class="img-side">';
+            echo '<div class="img-item">';
+            while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="img-item">';
+                echo '<img src="' . $row["yama_img"] . '" width="200" height="100">';
+                echo '</div>';
+            }
+            echo '</div>', '</div>';
+        }
+
+        ?>
+        
+
+        
+                <button id="scroll" class="scroll-btn">></button>
             </div>
 
         <h2>国内</h2>
@@ -68,4 +72,4 @@
         <script src="./javascript/userhome.js"></script>
     </form>
 </body>
-</html>
+</html> 
