@@ -36,15 +36,7 @@
                     <img src="./images/kirimanjaro.jpg" width="200" height="100">
                     <p>キリマンジャロ</p>
                 </div>
-                <div class="img-item">
-                    <img src="./images/kirimanjaro.jpg" width="200" height="100">
-                    <p>キリマンジャロ</p>
-                </div>
-                <div class="img-item">
-                    <img src="./images/kirimanjaro.jpg" width="200" height="100">
-                    <p>キリマンジャロ</p>
-                </div>
-                <button id="scroll" class="scroll-btn">></button>
+                <button id="scroll" class="scroll-btn">></button><!--画像スクロールと「＞」を右に寄せる-->
             </div>
 
         <h2>国内</h2>
