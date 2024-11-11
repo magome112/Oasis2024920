@@ -1,13 +1,13 @@
 <?php
 // データベース接続情報
-$host = 'localhost';
-$dbname = 'ecommerce';
+$host = 'mysql305.phy.lolipop.lan';
+$dbname = 'LAA1553845-2024php';
 $username = 'LAA1553845';
 $password = 'pass1234';
 
 
     // データベースに接続
-    $pdo = new PDO('mysql:host=mysql305.phy.lolipop.lan;dbname=LAA1553845-2024php;', 'LAA1553845', 'pass1234');
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
