@@ -7,7 +7,7 @@
     <title>ホーム</title>
 </head>
 <body>
-    <form action="./shohin_4.php" method="post">
+    <form action="_4_shohin.php" method="post">
         <input type="search" name="search">
         <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
         <hr>
@@ -61,7 +61,7 @@
         </div>
 
         <img src="./images/oasislogo.jpg" width="200" height="100">
-        <a href="./kounyurireki_8.php">購入履歴</a>
+        <a href="./_8_kounyurireki.php">購入履歴</a>
     </form>
 </body>
 </html>

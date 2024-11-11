@@ -19,7 +19,7 @@ $password = 'pass1234';
     <title>レビュー記入</title>
 </head>
 <body>
-    <form action="./review_7.php" method="post" enctype="multipart/form-data">
+    <form action="_7_review.php" method="post" enctype="multipart/form-data">
     <img src="./images/oasislogo.jpg">
     <hr>
 
