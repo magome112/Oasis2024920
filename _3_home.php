@@ -8,8 +8,8 @@
 </head>
 <body>
     <form action="./shohin_4.php" method="post">
-        <input type="search" name="search">
         <div class="header-img">
+            <input type="search" name="search">
             <img src="./images/oasislogo.jpg" width="100" height="50">
         </div>
         <hr>
