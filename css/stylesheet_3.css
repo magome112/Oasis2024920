@@ -1,7 +1,6 @@
 .header-img{
     display: flex;
-    align-items: center;
-    border: 1px solid red;
+    justify-content: center;
 }
 .img-side{
     display: flex;
