@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <img src="./images/oasislogo.jpg" width="200" height="100">
+        <img src="./images/oasislogo.jpg" width="100" height="50">
         <a href="./kounyurireki_8.php">購入履歴</a>
     </form>
 </body>
