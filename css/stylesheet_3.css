@@ -1,3 +1,7 @@
+#center-img{
+    display: block;
+    margin: auto; 
+}
 .img-side{
     display: flex;
     justify-content: center;
