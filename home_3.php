@@ -1,38 +1,64 @@
-<?php
-// データベース接続情報
-$host = 'localhost';
-$dbname = 'ecommerce';
-$username = 'LAA1553845';
-$password = 'pass1234';
-
-
-    // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>
-
 <!DOCTYPE html>
 <html lang="jp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet_3.css">
     <title>ホーム</title>
 </head>
 <body>
     <form action="./shohin_4.php" method="post">
         <input type="search" name="search">
-        <img src="./images/oasislogo.jpg" width="200" height="100">
+        <img src="./images/oasislogo.jpg" width="100" height="50">
         <hr>
 
         <h2>海外</h2>
-        <img src="./images/eberesuto.jpg" width="200" height="100"><br>エベレスト
-        <img src="./images/kannchenjunnga.jpg" width="200" height="100"><br>カンチェンジュンガ
-        <img src="./images/manasuru.jpg" width="200" height="100"><br>マナスル
+        <div class="img-side">
+            <div class="img-item">
+                <img src="./images/eberesuto.jpg" width="200" height="100">
+                <p>エベレスト</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/kannchenjunnga.jpg" width="200" height="100">
+                <p>カンチェンジュンガ</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/manasuru.jpg" width="200" height="100">
+                <p>マナスル</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/mattahorun.jpg" width="200" height="100">
+                <p>マッターホルン</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/kirimanjaro.jpg" width="200" height="100">
+                <p>キリマンジャロ</p>
+            </div>
+        </div>
 
         <h2>国内</h2>
-        <img src="./images/hujisan.jpg" width="200" height="100"><br>富士山
-        <img src="./images/hodaka.jpg" width="200" height="100"><br>穂高岳
-        <img src="./images/sakurajima.jpg" width="200" height="100"><br>桜島
+        <div class="img-side">
+            <div class="img-item">
+                <img src="./images/hujisan.jpg" width="200" height="100">
+                <p>富士山</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/hodaka.jpg" width="200" height="100">
+                <p>穂高岳</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/sakurajima.jpg" width="200" height="100">
+                <p>桜島</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/asozan.jpg" width="200" height="100">
+                <p>阿蘇山</p>
+            </div>
+            <div class="img-item">
+                <img src="./images/rijirizan.jpg" width="200" height="100">
+                <p>利尻山</p>
+            </div>
+        </div>
 
         <img src="./images/oasislogo.jpg" width="200" height="100">
         <a href="./kounyurireki_8.php">購入履歴</a>

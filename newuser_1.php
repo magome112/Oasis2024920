@@ -21,10 +21,10 @@
 
                 <p><input type="submit" value="新規作成"></p>
             </div>
-        <div class="radio-center">
-            <p><input type="radio" name="guest" value="guest">ゲストでログイン</p>
-            <p><input type="radio" name="login" value="login">ログイン</p>
-        </div>
+            <div class="radio-center">
+                <p><input type="radio" name="guest" value="guest">ゲストでログイン</p>
+                <p><input type="radio" name="login" value="login">ログイン</p>
+            </div>
     </form>
 </body>
 </html>
