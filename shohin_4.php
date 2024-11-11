@@ -2,10 +2,19 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>商品一覧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet_1.css">
+    <title>商品一覧画面</title>
 </head>
 <body>
-    <h1>商品一覧</h1>
+<form action="./home_3.php" method="post">
+<img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
+
+
+
+
+
+<h1>商品一覧</h1>
     <div class="product-list">
         <?php foreach ($products as $product): ?>
             <div class="product">
