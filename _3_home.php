@@ -15,7 +15,6 @@
         <hr>
 
         <h2>海外</h2>
-        <div class="scroll">
             <div class="img-side">
                 <div class="img-item">
                     <img src="./images/eberesuto.jpg" width="200" height="100">
@@ -37,23 +36,9 @@
                     <img src="./images/kirimanjaro.jpg" width="200" height="100">
                     <p>キリマンジャロ</p>
                 </div>
-                <div class="img-item">
-                    <img src="./images/kirimanjaro.jpg" width="200" height="100">
-                    <p>キリマンジャロ</p>
-                </div>
-                <div class="img-item">
-                    <img src="./images/kirimanjaro.jpg" width="200" height="100">
-                    <p>キリマンジャロ</p>
-                </div>
-                <div class="img-item">
-                    <img src="./images/kirimanjaro.jpg" width="200" height="100">
-                    <p>キリマンジャロ</p>
-                </div>
             </div>
-        </div>
 
         <h2>国内</h2>
-        <div class="scroll">
             <div class="img-side">
                 <div class="img-item">
                     <img src="./images/hujisan.jpg" width="200" height="100">
@@ -76,7 +61,6 @@
                     <p>利尻山</p>
                 </div>
             </div>
-        </div>
 
         <img src="./images/oasislogo.jpg" width="100" height="50">
         <a href="_8_kounyurireki.php">購入履歴</a>
