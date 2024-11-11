@@ -1,7 +1,7 @@
-#center-img{
-    display: block;
-    margin-right: auto;
-    margin-left: auto; 
+.header-img{
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
 }
 .img-side{
     display: flex;

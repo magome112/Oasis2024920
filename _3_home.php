@@ -8,8 +8,10 @@
 </head>
 <body>
     <form action="_4_shohin.php" method="post">
-        <input type="search" name="search">
-        <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
+        <div class="header-img">
+            <input type="search" name="search">
+            <img src="./images/oasislogo.jpg" width="100" height="50">
+        </div>
         <hr>
 
         <h2>海外</h2>
@@ -60,8 +62,8 @@
             </div>
         </div>
 
-        <img src="./images/oasislogo.jpg" width="200" height="100">
-        <a href="./_8_kounyurireki.php">購入履歴</a>
+        <img src="./images/oasislogo.jpg" width="100" height="50">
+        <a href="_8_kounyurireki.php">購入履歴</a>
     </form>
 </body>
 </html>
