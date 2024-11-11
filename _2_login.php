@@ -19,7 +19,7 @@ $password = 'pass1234';
     <title>ログイン</title>
 </head>
 <body>
-    <form action="./home_3.php" method="post">
+    <form action="_3_home.php" method="post">
         <p><h3><input type="radio" name="login">ログイン</h3></p>
         <p><h4>メールアドレスまたは電話番号</h4></p>
         <h3><input type="text" name="u_mail"></h3>

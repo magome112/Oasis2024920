@@ -56,7 +56,7 @@ $password = 'pass1234';
 
     <input type="checkbox" name="kiyaku">利用規約に同意する
     
-    <form action="home_3.php" method="post">
+    <form action="_3_home.php" method="post">
         <input type="submit" value="購入する">
     </form>
 

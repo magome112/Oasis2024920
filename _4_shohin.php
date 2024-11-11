@@ -7,7 +7,7 @@
     <title>商品一覧画面</title>
 </head>
 <body>
-<form action="./home_3.php" method="post">
+<form action="_3_home.php" method="post">
 <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
 
 
