@@ -1,6 +1,7 @@
 #center-img{
     display: block;
-    margin: auto; 
+    margin-right: auto;
+    margin-left: auto; 
 }
 .img-side{
     display: flex;
