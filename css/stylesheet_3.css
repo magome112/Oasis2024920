@@ -11,12 +11,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-.scroll{
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100%;
-}
 .img-side{
     display: flex;
     justify-content: center;
