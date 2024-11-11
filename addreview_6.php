@@ -7,8 +7,8 @@ $password = 'pass1234';
 
 
     // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO('mysql:host=mysql305.phy.lolipop.lan;dbname=LAA1553845-2024php;', 'LAA1553845', 'pass1234');
+         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
 <!DOCTYPE html>
