@@ -26,3 +26,12 @@
 .img-side p {
     margin: 0;
 }
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

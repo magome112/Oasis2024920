@@ -36,6 +36,7 @@
                     <img src="./images/kirimanjaro.jpg" width="200" height="100">
                     <p>キリマンジャロ</p>
                 </div>
+                <button id="scroll" class="scroll-btn">></button>
             </div>
 
         <h2>国内</h2>
@@ -64,6 +65,7 @@
 
         <img src="./images/oasislogo.jpg" width="100" height="50">
         <a href="_8_kounyurireki.php">購入履歴</a>
+        <script src="./javascript/userhome.js"></script>
     </form>
 </body>
 </html>
