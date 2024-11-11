@@ -1,0 +1,20 @@
+#center-img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto; 
+}
+.img-side{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.img-side img{
+    display: block;
+    margin-bottom: 10px;
+}
+.img-item{
+    text-align: center;
+}
+.img-side p {
+    margin: 0;
+}

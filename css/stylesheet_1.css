@@ -2,10 +2,15 @@
     display: block;
     margin: auto; 
 }
-.p{
+.center{
     text-align: center;
 }
-.textbox{
-    display: block;
-    margin: auto;
+.radio-center{
+    display: flex;
+    justify-content: center;  
+}
+.radio-center p{
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
 }
