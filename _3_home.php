@@ -18,7 +18,7 @@
         $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
         dbname=LAA1602729-oasis;charset=utf8',
         'LAA1602729',
-        'oasis5');
+        'oasis5');//データベース接続の確認
 
         $sql1 = "SELECT 'yama_img' FROM 'Oasis_yama' WHERE 'Region' = 1 ";
         $result1 = $pdo->query($sql);
