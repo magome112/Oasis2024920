@@ -1,7 +1,15 @@
 .header-img{
     display: flex;
+    justify-content: center;
     align-items: center;
-    border: 1px solid red;
+}
+.header-img input{
+    position: absolute;
+    left: 100px;
+}
+.header-img img{
+    margin-left: auto;
+    margin-right: auto;
 }
 .img-side{
     display: flex;
