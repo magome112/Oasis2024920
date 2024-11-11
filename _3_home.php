@@ -9,7 +9,9 @@
 <body>
     <form action="./shohin_4.php" method="post">
         <input type="search" name="search">
-        <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
+        <div class="header-img">
+            <img src="./images/oasislogo.jpg" width="100" height="50">
+        </div>
         <hr>
 
         <h2>海外</h2>
