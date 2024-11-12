@@ -25,7 +25,7 @@
     $rowCount = $result1->rowCount();
 
     if($rowCount > 0){
-        echo '<h2>海外</h2>';
+        echo '<h2 id="h2">海外</h2>';
         echo '<div class="img-side">';
             while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
                 echo '<div class="img-item">';
