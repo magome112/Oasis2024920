@@ -20,21 +20,20 @@
                     'LAA1602729',
                     'oasis5');
 
-    $sql1 = "SELECT `yama_img` FROM `Oasis_yama` WHERE `Region` = 1 ";
+    $sql1 = "SELECT `yama_img`, `yama_name` FROM `Oasis_yama` WHERE `Region` = 1 ";
     $result1 = $pdo->query($sql1);
     $rowCount = $result1->rowCount();
 
     if($rowCount > 0){
-        echo '<h2>海外</h2>';
+        echo '<h2 class="h2">海外</h2>';
         echo '<div class="img-side">';
-        echo '<div class="img-item">';
             while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
-                 echo '<div class="img-item">';
+                echo '<div class="img-item">';
                 echo '<img src="' . $row["yama_img"] . '" width="200" height="100">';
                 echo '<p>'. $row["yama_name"];
                 echo '</div>';
             }
-        echo '</div>', '</div>';
+        echo '</div>';
     }
    
 ?>
