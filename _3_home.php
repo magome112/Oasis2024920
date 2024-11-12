@@ -20,7 +20,7 @@
                     'LAA1602729',
                     'oasis5');
 
-    $sql1 = "SELECT `yama_img` FROM `Oasis_yama` WHERE `Region` = 1 ";
+    $sql1 = "SELECT `yama_img`, `yama_name` FROM `Oasis_yama` WHERE `Region` = 1 ";
     $result1 = $pdo->query($sql1);
     $rowCount = $result1->rowCount();
 
