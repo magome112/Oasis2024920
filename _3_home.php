@@ -17,7 +17,7 @@
         <?php
         try{
         $pdo = new PDO('mysql:host=localhost;
-        dbname=LAA1602729-oasis;charset=utf8mb4',
+        dbname=Oasis;charset=utf8mb4',
         'root',
         '');
 
