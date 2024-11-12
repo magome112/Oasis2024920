@@ -27,36 +27,7 @@
                     </div>
                     <hr>
             
-                    <?php
-                    try{
-                    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
-                    dbname=LAA1602729-oasis;charset=utf8mb4',
-                    'LAA1602729',
-                    'oasis5');
-            
-                    $sql1 = "SELECT `yama_img` FROM `Oasis_yama` WHERE `Region` = 1 ";
-                    $result1 = $pdo->query($sql);
-                    $rowCount = $result1->rowCount();
-            
-                    if($rowCount > 0){
-                        echo '<h2>海外</h2>';
-                        echo '<div class="img-side">';
-                        echo '<div class="img-item">';
-                        while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<div class="img-item">';
-                            echo '<img src="' . $row["yama_img"] . '" width="200" height="100">';
-                            echo '</div>';
-                        }
-                        echo '</div>', '</div>';
-                    }
-                    }catch(PDOException $e) {
-                        // データベース接続やクエリ実行でエラーが発生した場合の処理
-                        echo "データベースエラー: " . $e->getMessage();
-                    } catch (Exception $e) {
-                        // その他のエラーが発生した場合の処理
-                        echo "エラー: " . $e->getMessage();
-                    }
-                    ?>
+                   
                     
             
                     
