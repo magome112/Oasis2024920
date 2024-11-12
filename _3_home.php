@@ -31,6 +31,7 @@
             while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
                  echo '<div class="img-item">';
                 echo '<img src="' . $row["yama_img"] . '" width="200" height="100">';
+                echo '<p>'. $row["yama_name"];
                 echo '</div>';
             }
         echo '</div>', '</div>';
