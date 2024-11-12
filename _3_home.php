@@ -7,26 +7,36 @@
     <title>ホーム</title>
 </head>
 <body>
+<form action="_4_shohin.php" method="post">
+    <div class="header-img">
+        <input type="search" name="search">
+        <img src="./images/oasislogo.jpg" width="100" height="50">
+    </div>
+    <hr>
+
 <?php
-$dsn = 'mysql:host=mysql306.phy.lolipop.lan;dbname=LAA1602729-oasis;charset=utf8mb4';  // DSN（データソース名）
-$username = 'LAA1602729';  // ユーザー名
-$password = 'oasis5';  // パスワード
+    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+                    dbname=LAA1602729-oasis;charset=utf8',
+                    'LAA1602729',
+                    'oasis5');
 
-try {
-    // PDOインスタンスを作成してデータベースに接続
-    $pdo = new PDO($dsn, $username, $password);
-    
-    // エラーモードを設定（例外を投げる設定）
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql1 = "SELECT `yama_img`, `yama_name` FROM `Oasis_yama` WHERE `Region` = 1 ";
+    $result1 = $pdo->query($sql1);
+    $rowCount = $result1->rowCount();
 
-    // 接続成功のメッセージを表示
-    echo "データベースに接続しました！";
-    
-} catch (PDOException $e) {
-    // 接続失敗時のエラーメッセージを表示
-    echo "接続失敗: " . $e->getMessage();
-}
+    if($rowCount > 0){
+        echo '<h2 class="h2">海外</h2>';
+        echo '<div class="img-side">';
+            while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="img-item">';
+                echo '<img src="' . $row["yama_img"] . '" width="200" height="100">';
+                echo '<p>'. $row["yama_name"];
+                echo '</div>';
+            }
+        echo '</div>';
+    }
+   
 ?>
-
+</form>
 </body>
 </html> 
