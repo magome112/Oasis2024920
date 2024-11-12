@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="_4_shohin.php" method="post">
-    <div class="header-img">
+        <div class="header-img">
             <input type="search" name="search">
             <img src="./images/oasislogo.jpg" width="100" height="50">
         </div>
@@ -20,7 +20,7 @@
         'LAA1602729',
         'oasis5');
 
-        $sql1 = "SELECT 'yama_img' FROM 'Oasis_yama' WHERE 'Region' = 1 ";
+        $sql1 = "SELECT `yama_img` FROM `Oasis_yama` WHERE `Region` = 1 ";
         $result1 = $pdo->query($sql);
         $rowCount = $result1->rowCount();
 
