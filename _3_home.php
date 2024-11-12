@@ -18,8 +18,8 @@
         try{
         $pdo = new PDO('mysql:host=localhost;
         dbname=LAA1602729-oasis;charset=utf8mb4',
-        'LAA1602729',
-        'oasis5');
+        'root',
+        '');
 
         $sql1 = "SELECT `yama_img` FROM `Oasis_yama` WHERE `Region` = 1 ";
         $result1 = $pdo->query($sql);
