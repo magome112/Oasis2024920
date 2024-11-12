@@ -42,5 +42,15 @@ try {
 }
 ?>
 
+
+<!--ロゴをクリックした際の挙動テスト-->
+<div class="header-img">
+        <img src="<?php echo htmlspecialchars($imageUrl, ENT_QUOTES , 'UTF-8'); ?>"
+        alt="クリックで遷移する画像"
+        onclick="locathion.herf='<?php echo htmlspecialchars($redirectUrl, ENT_QUOTES, 'UTF-8'); ?>';"/>
+        <!--<input type="search" name="search">
+        <img src="./images/oasislogo.jpg" width="100" height="50">-->
+    </div>
+
 </body>
 </html> 
