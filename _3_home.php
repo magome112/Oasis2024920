@@ -15,7 +15,7 @@
         <hr>
 
         <?php
-        try{
+        
         $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
         dbname=LAA1602729-oasis;charset=utf8',
         'LAA1602729',
@@ -35,13 +35,6 @@
                 echo '</div>';
             }
             echo '</div>', '</div>';
-        }
-        }catch(PDOException $e) {
-            // データベース接続やクエリ実行でエラーが発生した場合の処理
-            echo "データベースエラー: " . $e->getMessage();
-        } catch (Exception $e) {
-            // その他のエラーが発生した場合の処理
-            echo "エラー: " . $e->getMessage();
         }
         ?>
         
@@ -79,4 +72,4 @@
         <script src="./javascript/userhome.js"></script>
     </form>
 </body>
-</html> 
+</html>
