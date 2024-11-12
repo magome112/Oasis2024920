@@ -16,10 +16,10 @@
 
         <?php
         try{
-        $pdo = new PDO('mysql:host=localhost;
-        dbname=Oasis;charset=utf8mb4',
-        'root',
-        '');
+        $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+        dbname=LAA1602729-oasis;charset=utf8',
+        'LAA1602729',
+        'oasis5');
 
         $sql1 = "SELECT `yama_img` FROM `Oasis_yama` WHERE `Region` = 1 ";
         $result1 = $pdo->query($sql);
