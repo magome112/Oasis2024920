@@ -28,9 +28,9 @@
         echo '<h2 class="h2">海外</h2>';
         echo '<div class="img-container">';
             while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
-                echo '<div class="img-slide" id=""img_slide>';
+                echo '<div class="img-slide" id="img_slide>';
                 echo '<img src="' . $row["yama_img"] . '" width="200" height="100">';
-                echo '<p>'. $row["yama_name"];
+                echo '<p>'. $row["yama_name"]. '</p>';
                 echo '</div>';
             }
         echo '</div>';
