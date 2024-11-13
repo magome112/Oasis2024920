@@ -26,17 +26,18 @@
 
     if($rowCount > 0){
         echo '<h2 class="h2">海外</h2>';
-        echo '<div class="img-side">';
+        echo '<div class="img-container">';
             while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
-                echo '<div class="img-item">';
+                echo '<div class="img-slide" id=""img_slide>';
                 echo '<img src="' . $row["yama_img"] . '" width="200" height="100">';
                 echo '<p>'. $row["yama_name"];
                 echo '</div>';
             }
         echo '</div>';
     }
-   
 ?>
+<button id="next_img">&gt;</button>
+<script src="./javascript/userhome.js"></script>
 </form>
 </body>
 </html> 

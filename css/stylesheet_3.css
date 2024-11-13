@@ -11,29 +11,39 @@
     margin-left: auto;
     margin-right: auto;
 }
-.img-side{
+.img-container{
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
-.img-side img{
+.img-container img{
+    width: 500px;
     display: block;
-    margin-bottom: 10px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
 }
-.img-item{
-    text-align: center;
+.img-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
 }
-.img-side p {
+.img-container p {
     margin: 0;
 }
-.scroll-btn {
+#next_img {
     position: absolute;
     top: 50%;
+    right: 10px;
     transform: translateY(-50%);
     font-size: 24px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 10;
 }
 .h2 {
     left: 50px;
