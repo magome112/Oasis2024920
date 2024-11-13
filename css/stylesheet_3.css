@@ -11,22 +11,25 @@
     margin-left: auto;
     margin-right: auto;
 }
-.img-container{
+.img-container {
     display: flex;
+    justify-content: flex-start;
     overflow: hidden;
+    width: 100%;
+    position: relative;
 }
-.img-slide{
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
+.img-container img {
+    width: 500px;
+    display: block;
     margin-right: 15px;
     transition: transform 0.3s ease;
 }
-.img-container img{
+.img-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: auto;
+    overflow: hidden;
 }
 .img-container p {
     margin: 0;
