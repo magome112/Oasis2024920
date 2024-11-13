@@ -1,20 +1,11 @@
-<?php
-// データベース接続情報
-$host = 'localhost';
-$dbname = 'ecommerce';
-$username = 'LAA1553845';
-$password = 'pass1234';
-
-
-    // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="jp">
 <head>
-  <meta charset="UTF-8">
-  <title>管理ホーム</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet_3.css">
+    <title>ホーム</title>
+
   <style>
     div{
         display: flex;
@@ -35,7 +26,7 @@ $password = 'pass1234';
     .box3{
         border-radius: 20px 60px;
     }
-  </style>
+    </style>
 </head>
 <body>
   <div>
@@ -45,3 +36,8 @@ $password = 'pass1234';
   </div>
 </body>
 </html>
+<?php
+$dsn = 'mysql:host=mysql306.phy.lolipop.lan;dbname=LAA1602729-oasis;charset=utf8mb4';  // DSN（データソース名）
+$username = 'LAA1602729';  // ユーザー名
+$password = 'oasis5';  // パスワード
+?>
