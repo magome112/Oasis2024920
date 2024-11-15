@@ -26,7 +26,7 @@
 .img-container {
     display: flex;
     justify-content: flex-start;
-    width: calc(100% - 40px);
+    width: 750px; /*各画像150px ×　５枚 */
     overflow: hidden;
     scroll-behavior: smooth;
 }
