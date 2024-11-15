@@ -1,3 +1,14 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+</head>
+<body>
 <?php
 /*データベース接続情報
 $host = 'localhost';
@@ -15,16 +26,6 @@ $password = 'pass1234';
                     'oasis5');
 ?>
 
-
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン</title>
-</head>
-<body>
     <form action="_8_kounyurireki.php" method="post">
         <p><h3><input type="radio" name="login">ログイン</h3></p>
         <p><h4>メールアドレスまたは電話番号</h4></p>
