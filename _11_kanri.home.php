@@ -36,8 +36,3 @@
   </div>
 </body>
 </html>
-<?php
-$dsn = 'mysql:host=mysql306.phy.lolipop.lan;dbname=LAA1602729-oasis;charset=utf8mb4';  // DSN（データソース名）
-$username = 'LAA1602729';  // ユーザー名
-$password = 'oasis5';  // パスワード
-?>
