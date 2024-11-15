@@ -1,45 +1,40 @@
 <?php
+/*データベース接続情報
+$host = 'localhost';
+$dbname = 'ecommerce';
+$username = 'LAA1553845';
+$password = 'pass1234';
 
-$imageUrl = "./images/oasislogo.jpg";
-$redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
+
+    // データベースに接続
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
+    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+                    dbname=LAA1602729-oasis;charset=utf8',
+                    'LAA1602729',
+                    'oasis5');
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stylesheet_3.css">
-    <title>商品一覧画面</title>
-    <style>
-        img{
-            cursor: pointer;
-
-        }    
-    </style>
-
+    <title>ログイン</title>
 </head>
 <body>
-<!--<form action="_3_home.php" method="post">
-<img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">-->
-<div class="header-img">
-        <img src="<?php echo htmlspecialchars($imageUrl, ENT_QUOTES , 'UTF-8'); ?>"
-        alt="クリックで遷移する画像"
-        onclick="locathion.herf='<?php echo htmlspecialchars($redirectUrl, ENT_QUOTES, 'UTF-8'); ?>';" width="100" height="50"/>
-</div>
-
-<h1>商品一覧</h1>
-    <div class="product-list">
-        <?php foreach ($products as $product): ?>
-            <div class="product">
-                <h2><?php echo htmlspecialchars($product['name']); ?></h2>
-                <p><?php echo htmlspecialchars($product['description']); ?></p>
-                <p>価格: ¥<?php echo number_format($product['price']); ?></p>
-                <?php if (!empty($product['image_url'])): ?>
-                    <img src="<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
-                <?php endif; ?>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    <form action="_8_kounyurireki.php" method="post">
+        <p><h3><input type="radio" name="login">ログイン</h3></p>
+        <p><h4>メールアドレスまたは電話番号</h4></p>
+        <h3><input type="text" name="u_mail"></h3>
+        <h3>パスワードを入力</h3>
+        <h3><input type="text" name="u_password"></h3>
+        <input type="submit" value="次に進む">
+        <br>
+        <input type="radio" name="guest/newuser" value="ゲストでログイン">
+        <input type="radio" name="guest/newuser" value="アカウント新規作成">
+    </form>
 </body>
 </html>
