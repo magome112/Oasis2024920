@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/stylesheet_3.css">
     <title>ホーム</title>
-
+    <?php
+    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+                    dbname=LAA1602729-oasis;charset=utf8',
+                    'LAA1602729',
+                    'oasis5');
+    ?>
   <style>
     div{
         display: flex;
