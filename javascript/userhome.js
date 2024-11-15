@@ -1,17 +1,19 @@
 let currentIndex = 0;
-const images = document.querySelectorAll('.img-container img');
-const nextButton = document.getElementById('next_img');
 
-nextButton.addEventListener('click', function() {
-    if (currentIndex < images.length - 5) {
-        currentIndex++;
-        updateSlide();
+function slideImages(containerId) {
+    const container = document.getElementById(containerId);
+    const slideWidth = container.querySelector('.img-slide').offsetWidth + 15;
+
+    //次のスライド位置へスクロール
+    container.scrollBy({
+       left: slideWidth,
+       behavior: 'smooth' 
+    });
+
+    //最後まで行ったら最初に戻す
+    currentIndex += 1;
+    if(currentIndex >= container.children.length - 5) {
+        currentIndex = 0;
+        container.scrollTo({ left: 0, behavior: 'smooth' });
     }
-});
-
-function updateSlide() {
-    const containerWidth = document.querySelector('.img-container').offsetWidth;
-    const slideWidth = images[0].offsetWidth + 15;  // 画像の幅 + ギャップ
-    const offset = -(currentIndex * slideWidth);   // スライド幅に基づいてオフセットを計算
-    document.querySelector('.img-container').style.transform = `translateX(${offset}px)`;
 }
