@@ -15,34 +15,45 @@
     margin-right: auto;
 }
 
-/* 画像を横並びにするための設定 */
-.img-container {
-    display: flex;
-    justify-content: flex-start; /* 横並び */
-    width: 100%;
+/* 全体の画像コンテナ */
+.img-container-wrapper {
     position: relative;
-    overflow: hidden; /* 横スクロールを防ぐ */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.img-container img {
-    width: 20%; /* 画像の幅を20%に設定（5枚並べるため） */
-    display: block;
-    margin-right: 15px; /* 画像間のギャップ */
-    transition: transform 0.3s ease;
+.img-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 750px; /*各画像150px ×　５枚 */
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
+
 
 .img-slide {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* スライドの際に画像がはみ出さないようにする */
+    width: 150px;
+    margin-right: 15px;
 }
 
-.img-container p {
-    margin: 0;
+.img-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-/* 次の画像ボタンの設定 */
+.img-slide p {
+    margin:5px 0 0 0 ;
+    text-align: center;
+    font-size: 14px;
+}
+
 #next_img {
     position: absolute;
     top: 50%;
@@ -56,5 +67,5 @@
 }
 
 .h2 {
-    left: 50px;
+    margin-left: 50px;
 }
