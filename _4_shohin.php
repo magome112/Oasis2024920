@@ -10,7 +10,7 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/stylesheet_3.css">
-    <title>商品一覧画面</title>
+    <title>商品詳細画面</title>
     <style>
         img{
             cursor: pointer;
@@ -20,6 +20,44 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
 
 </head>
 <body>
+    <?php
+        $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+        dbname=LAA1602729-oasis;charset=utf8',
+        'LAA1602729',
+        'oasis5');
+    ?>
+
+    <form action="submit.php" method="POST">
+    <label for="name">名前:</label>
+    <input type="text" name="name" required>
+    <br>
+    <label for="email">メール:</label>
+    <input type="email" name="email" required>
+    <br>
+    <input type="submit" value="送信">
+    </form>
+
+        <?
+// フォームデータの取得
+$name = $_POST['name'];
+$email = $_POST['email'];
+
+// SQLクエリ作成
+$sql = "INSERT INTO users (name, email) VALUES (?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $name, $email);
+
+// 実行とエラーチェック
+if ($stmt->execute()) {
+    echo "データが正常に保存されました。";
+} else {
+    echo "エラー: " . $stmt->error;
+}
+
+$stmt->close();
+$conn->close();
+?>
+
 <!--<form action="_3_home.php" method="post">
 <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">-->
 <div class="header-img">
