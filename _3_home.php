@@ -7,7 +7,6 @@
     <title>ホーム</title>
 </head>
 <body>
-<form action="_4_shohin.php" method="post">
     <div class="header-img">
         <input type="search" name="search">
         <img src="./images/oasislogo.jpg" width="100" height="50">
@@ -28,7 +27,7 @@
     if($rowCount > 0){
         echo '<h2 class="h2">海外</h2>';
         echo '<div class="img-container-wrapper">';
-        echo '<div class="img-container" id="img-container">';
+        echo '<div class="img-container" id="img-container-1">';
             while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
                 echo '<div class="img-slide">';
                 echo '<img src="' . $row["yama_img"] . '">';
@@ -36,7 +35,8 @@
                 echo '</div>';
             }
         echo '</div>';
-        echo '<button class="next-img" onclick="slideImages(\'img-container-1\')">&gt;</button>';
+        echo '<div class="Arrow left">&lt;</div>';
+        echo '<div class="Arrow right>&gt;</div>';
         echo '</div>';
     }
 
@@ -56,11 +56,12 @@
                 echo '</div>';
             }
         echo '</div>';
-        echo '<button class="next-img" onclick="slideImages(\'img-container-2\')">&gt;</button>';
+        echo '<div class="Arrow left">&lt;</div>';
+        echo '<div class="Arrow right>&gt;</div>';
         echo '</div>';
     }
 ?>
-</form>
+
 <script src="./javascript/userhome.js"></script>
 </body>
 </html>

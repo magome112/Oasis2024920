@@ -1,19 +1,23 @@
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const leftArrow = document.querySelector('.Arrow.left');
+    const rightArrow = document.querySelector('.Arrow.right');
+    const containers = document.querySelectorAll('.img-container');
+    const scrollAmount = 5; //１回で５枚スライド
 
-function slideImages(containerId) {
-    const container = document.getElementById(containerId);
-    const slideWidth = container.querySelector('.img-slide').offsetWidth + 15;
-
-    //次のスライド位置へスクロール
-    container.scrollBy({
-       left: slideWidth,
-       behavior: 'smooth' 
+    leftArrow.addEventListener('click', () => {
+        containers.forEach(container => {
+            const currentTransform = container.computedStyleMap.tramsform.replace('px)', '') || 0;
+            const newTransform = Math.min(0, parseInt(currentTransform) + (scrollAmount * 300));
+            container.style.tramsform = `translateX(${newTransform}px)`;
+        });
     });
 
-    //最後まで行ったら最初に戻す
-    currentIndex += 1;
-    if(currentIndex >= container.children.length - 5) {
-        currentIndex = 0;
-        container.scrollTo({ left: 0, behavior: 'smooth' });
-    }
-}
+    rightArrow.addEventListener('click', () => {
+        containers.forEach(container => {
+            const currentTransform = container.style.transform.replace('trans;ateX(', '').replace('px)', '') || 0;
+            const maxscroll = (container.children.length - 5) * 300; //５枚表示なので、スクロールの最大幅は画像の数 - 5で計算
+            const newTransform = Math.max(-maxscroll,parseInt(currentTransform) - (scrollAmount * 300));
+            container.style.transform - `translateX(${newTransform}px)`;
+        });
+    });
+}); 
