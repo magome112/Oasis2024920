@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const leftArrow = document.querySelector('.Arrow.left');
-    const rightArrow = document.querySelector('.Arrow.right');
-    const containers = document.querySelectorAll('.img-container');
-    const scrollAmount = 300; // 1回でスライドする距離（画像の幅）
+    const arrows = document.querySelectorAll('.Arrow');
 
-    containers.forEach((container) => {
-        let currentTransform = 0; // 現在の位置を記録
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', () => {
+            const targetId = arrow.getAttribute('data-target');
+            const container = document.getElementById(targetId);
+            const scrollAmount = 300; // スライドする距離
+            let currentTransform = parseInt(getComputedStyle(container).transform.split(',')[4]) || 0;
 
-        leftArrow.addEventListener('click', () => {
-            // 左矢印クリック時
-            currentTransform = Math.min(0, currentTransform + scrollAmount); // 左端を超えないように制限
-            container.style.transform = `translateX(${currentTransform}px)`;
-        });
+            if (arrow.classList.contains('left')) {
+                // 左ボタンクリック時
+                currentTransform = Math.min(0, currentTransform + scrollAmount);
+            } else {
+                // 右ボタンクリック時
+                const maxScroll = (container.children.length - 5) * scrollAmount;
+                currentTransform = Math.max(-maxScroll, currentTransform - scrollAmount);
+            }
 
-        rightArrow.addEventListener('click', () => {
-            // 右矢印クリック時
-            const maxScroll = (container.children.length - 5) * scrollAmount; // スクロール最大幅
-            currentTransform = Math.max(-maxScroll, currentTransform - scrollAmount); // 右端を超えないように制限
             container.style.transform = `translateX(${currentTransform}px)`;
         });
     });
