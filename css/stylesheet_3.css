@@ -20,13 +20,13 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin-bottom: 30px;
 }
 
 .img-container {
     display: flex;
     transition: transform 0.3s ease;
     width: fit-content;
+    overflow: hidden;
 }
 
 
@@ -41,8 +41,9 @@
 
 .img-slide img {
     width: 100%;
-    height: auto;
+    height: 150px;
     display: block;
+    object-fit: cover;
 }
 
 .img-slide p {
@@ -54,6 +55,7 @@
     position: absolute;
     top: 50%;
     transform:translateX(-50%);
+    z-index: 10;
     width: 30px;
     height: 30px;
     font-size: 20px;
@@ -62,15 +64,16 @@
     justify-content: center;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border-radius: 50%;
 }
 
 .Arrow.left {
-    left: 0;
+    left: 10px;
 }
 
 .Arrow.right {
-    right: 0;
+    right: 10px;
 }
 
 .h2 {
