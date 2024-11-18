@@ -6,3 +6,6 @@
     <link rel="stylesheet" href="./css/stylesheet_3.css">
     <title>ホーム</title>
 </head>
+<body>
+    <div style="text-align: center;"><img src="aikon.png" width="150" height="75"></div>
+</body>
