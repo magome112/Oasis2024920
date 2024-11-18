@@ -5,19 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
         arrow.addEventListener('click', () => {
             const targetId = arrow.getAttribute('data-target');
             const container = document.getElementById(targetId);
-            const scrollAmount = 300; // スライドする距離
-            let currentTransform = parseInt(getComputedStyle(container).transform.split(',')[4]) || 0;
+            const slides = container.querySelectorAll('.img-slide');
+
+            // 1画像分の幅（マージン込み）を取得
+            const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+
+            // 現在のtransform値を取得
+            const currentTransform = parseInt(getComputedStyle(container).transform.split(',')[4]) || 0;
+
+            let newTransform;
 
             if (arrow.classList.contains('left')) {
                 // 左ボタンクリック時
-                currentTransform = Math.min(0, currentTransform + scrollAmount);
+                newTransform = Math.min(0, currentTransform + slideWidth); // 左端を超えない
             } else {
                 // 右ボタンクリック時
-                const maxScroll = (container.children.length - 5) * scrollAmount;
-                currentTransform = Math.max(-maxScroll, currentTransform - scrollAmount);
+                const maxScroll = (slides.length - 5) * slideWidth; // 右端を超えない
+                newTransform = Math.max(-maxScroll, currentTransform - slideWidth);
             }
 
-            container.style.transform = `translateX(${currentTransform}px)`;
+            container.style.transform = `translateX(${newTransform}px)`;
         });
     });
 });
