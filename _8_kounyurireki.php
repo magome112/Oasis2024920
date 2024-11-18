@@ -1,31 +1,121 @@
 <?php
+$imageUrl = "./images/oasislogo.jpg";
 $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン</title>
-</head>
-<body>
-<?php
+    <title>購入履歴</title>
+
+    <?php
     $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
                     dbname=LAA1602729-oasis;charset=utf8',
                     'LAA1602729',
                     'oasis5');
-?>
+    ?>
 
-    <form action="_8_kounyurireki.php" method="post">
-        <p><h3><input type="radio" name="login">ログイン</h3></p>
-        <p><h4>メールアドレスまたは電話番号</h4></p>
-        <h3><input type="text" name="u_mail"></h3>
-        <h3>パスワードを入力</h3>
-        <h3><input type="text" name="u_password"></h3>
-        <input type="submit" value="次に進む">
-        <br>
-        <input type="radio" name="guest/newuser" value="ゲストでログイン">
-        <input type="radio" name="guest/newuser" value="アカウント新規作成">
-    </form>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+        }
+
+    
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }          
+        
+        .history-container {
+            padding: 20px;
+        }
+        .history-item {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .history-item img {
+            width: 200px;
+            height: auto;
+        }
+        .history-details {
+            padding: 20px;
+            flex: 1;
+        }
+        .purchase-info {
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .rental-tag {
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Oasis</div>
+        <div class="search-bar">
+            <input type="text" placeholder="検索">
+        </div>
+        <div class="login">ログイン</div>
+    </div>
+
+    <div class="history-container">
+        <h1>購入履歴</h1>
+
+        <!-- First Item -->
+        <div class="history-item">
+            <img src="volcano.jpg" alt="Volcano">
+            <div class="history-details">
+                <div class="purchase-info">
+                    <span class="label">購入日:</span> ○○月××日<br>
+                    <span class="label">合計:</span> ¥500,000,000,000 (税込)<br>
+                    <span class="label">購入者様名:</span> 山﨑 亮佑
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Item -->
+        <div class="history-item">
+            <img src="mountain.jpg" alt="Mountain">
+            <div class="history-details">
+                <div class="purchase-info">
+                    <span class="label">購入日:</span> ○○月××日<br>
+                    <span class="label">合計:</span> ¥500,000,000 (税込, 日割)<br>
+                    <span class="rental-tag">レンタル</span><br>
+                    <span class="label">購入者様名:</span> 山﨑 亮佑<br>
+                    <span class="label">レンタル期間:</span> △△△△年○○月○○日 ～ △△△△年○○月○○日まで
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
