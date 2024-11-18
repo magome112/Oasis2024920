@@ -7,5 +7,5 @@
     <title>ホーム</title>
 </head>
 <body>
-    <div style="text-align: center;"><img src="aikon.png" width="150" height="75"></div>
+    <div style="text-align: left;"><img src="aikon.png" width="150" height="75"></div>
 </body>
