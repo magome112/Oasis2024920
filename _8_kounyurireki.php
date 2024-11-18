@@ -1,3 +1,6 @@
+<?php
+$redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
