@@ -1,23 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const leftArrow = document.querySelector('.Arrow.left');
-    const rightArrow = document.querySelector('.Arrow.right');
-    const containers = document.querySelectorAll('.img-container');
-    const scrollAmount = 300; // 1回でスライドする距離（画像の幅）
+    const arrows = document.querySelectorAll('.Arrow');
 
-    containers.forEach((container) => {
-        let currentTransform = 0; // 現在の位置を記録
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', () => {
+            const targetId = arrow.getAttribute('data-target');
+            const container = document.getElementById(targetId);
+            const slides = container.querySelectorAll('.img-slide');
 
-        leftArrow.addEventListener('click', () => {
-            // 左矢印クリック時
-            currentTransform = Math.min(0, currentTransform + scrollAmount); // 左端を超えないように制限
-            container.style.transform = `translateX(${currentTransform}px)`;
-        });
+            // 1画像分の幅（マージン込み）を取得
+            const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
 
-        rightArrow.addEventListener('click', () => {
-            // 右矢印クリック時
-            const maxScroll = (container.children.length - 5) * scrollAmount; // スクロール最大幅
-            currentTransform = Math.max(-maxScroll, currentTransform - scrollAmount); // 右端を超えないように制限
-            container.style.transform = `translateX(${currentTransform}px)`;
+            // 現在のtransform値を取得
+            const currentTransform = parseInt(getComputedStyle(container).transform.split(',')[4]) || 0;
+
+            let newTransform;
+
+            if (arrow.classList.contains('left')) {
+                // 左ボタンクリック時
+                newTransform = Math.min(0, currentTransform + slideWidth); // 左端を超えない
+            } else {
+                // 右ボタンクリック時
+                const maxScroll = (slides.length - 5) * slideWidth; // 右端を超えない
+                newTransform = Math.max(-maxScroll, currentTransform - slideWidth);
+            }
+
+            container.style.transform = `translateX(${newTransform}px)`;
         });
     });
 });
