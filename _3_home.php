@@ -57,7 +57,6 @@
                 echo '</div>';
             }
         echo '</div>';
-        
         echo '<div class="Arrow right" dara-target="img-container-2">&gt;</div>';
         echo '</div>';
     }
