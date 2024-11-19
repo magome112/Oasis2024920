@@ -18,21 +18,20 @@
 /* 全体の画像コンテナ */
 .img-container-wrapper {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
 }
 
 .img-container {
     display: flex;
     transition: transform 0.3s ease;
-    width: fit-content;
     overflow: hidden;
 }
 
 
 .img-slide {
     flex-shrink: 0;
-    width: 20%;
+    width: 200px;
     height: 200px;
     margin-right: 10px;
     border-radius: 10px;
