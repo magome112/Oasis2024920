@@ -23,9 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // 右ボタンクリック時
                 const containerWidth = container.offsetWidth; // コンテナの幅を取得
-                const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight); // 1枚分の幅（マージン込み）
-                const visibleSlides = Math.floor(containerWidth / slideWidth); // 表示されるスライド数を計算
-                const maxScroll = (slides.length - visibleSlides) * slideWidth; // 最大スクロール量を計算
+                const maxScroll = (slides.length * slideWidth) * containerWidth; // 最大スクロール量を計算
                 newTransform = Math.max(-maxScroll, Math.min(0,currentTransform - slideWidth));
             }
 
