@@ -23,6 +23,7 @@
     //海外の山画像
     $sql1 = "SELECT `yama_img`, `yama_name` FROM `Oasis_yama` WHERE `Region` = 1 ";
     $result1 = $pdo->query($sql1);
+    var_dump($result1->fetchAll());
     $rowCount = $result1->rowCount();
 
     if($rowCount > 0){
