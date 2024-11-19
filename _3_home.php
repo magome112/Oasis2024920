@@ -32,7 +32,7 @@
         echo '<div class="img-container" id="img-container-1">';
             while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
                 echo '<div class="img-slide">';
-                echo '<img src="' . $row["yama_img"] . '" alt="'. $row["yama_name"]. '">';
+                echo '<img src="' . $row["yama_img"] . '" alt="' . $row["yama_name"] . '">';
                 echo '<p>'. $row["yama_name"]. '</p>';
                 echo '</div>';
             }
