@@ -15,7 +15,15 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
 </head>
 
 
-    <div class="header-img">
+    
+    <div class="header">
+        <div class="search-bar">
+            <input type="text" placeholder="検索">
+        </div>
+        <div class="login">ログイン</div>
+    </div>
+
+
         <input type="search" name="search">
         <img src="./images/oasislogo.jpg" width="100" height="50">
     </div>
@@ -40,11 +48,8 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
             padding: 10px;
             border-bottom: 1px solid #ccc;
         }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
+        
+        
         .search-bar {
             display: flex;
             align-items: center;
@@ -91,13 +96,8 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">Oasis</div>
-        <div class="search-bar">
-            <input type="text" placeholder="検索">
-        </div>
-        <div class="login">ログイン</div>
-    </div>
+    
+      
 
     <div class="history-container">
         <h1>購入履歴</h1>

@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById(targetId);
             const slides = container.querySelectorAll('.img-slide');
 
-            // 1画像分の幅（マージン込み）を取得
+            // 画像のスライド幅を計算し、コンテナの幅を設定する
             const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+            const containerWidth = slides.length * slideWidth;
+            container.style.width = `${containerWidth}px`;
 
             // 現在のtransform値を取得
-            const transformMatrix = getComputedStyle(container).transform;
-            const currentTransform = transformMatrix === 'none' ? 0 : parseInt(transformMatrix.split(',')[4]);
-            
+            const currentTransform = parseInt(getComputedStyle(container).transform.split(',')[4]) || 0;
 
             let newTransform;
 
@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 newTransform = Math.min(0, currentTransform + slideWidth); // 左端を超えない
             } else {
                 // 右ボタンクリック時
-                const containerWidth = container.offsetWidth; // コンテナの幅を取得
-                const maxScroll = (slides.length * slideWidth) * containerWidth; // 最大スクロール量を計算
-                newTransform = Math.max(-maxScroll, Math.min(0,currentTransform - slideWidth));
+                const maxScroll = (slides.length - 5) * slideWidth; // 右端を超えない
+                newTransform = Math.max(-maxScroll, currentTransform - slideWidth);
             }
 
+            // スライドの位置を変更
             container.style.transform = `translateX(${newTransform}px)`;
         });
     });

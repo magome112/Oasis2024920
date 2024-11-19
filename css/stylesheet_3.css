@@ -18,7 +18,7 @@
 /* 全体の画像コンテナ */
 .img-container-wrapper {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -31,7 +31,7 @@
 
 .img-slide {
     flex-shrink: 0;
-    width: 200px;
+    width: 20%;
     height: 200px;
     margin-right: 10px;
     border-radius: 10px;
