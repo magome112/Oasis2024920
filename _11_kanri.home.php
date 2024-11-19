@@ -21,7 +21,6 @@ $password = 'pass1234';
 <body>
     <div style="background-color: #27476C; width:100px; padding:500px; border:1px solid #ccc">
         <div style="text-align: left;"><img src="aikon.png" width="150" height="75"></div>
-        
 
 </div> 
 </body>
