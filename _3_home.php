@@ -23,15 +23,16 @@
     //海外の山画像
     $sql1 = "SELECT `yama_img`, `yama_name` FROM `Oasis_yama` WHERE `Region` = 1 ";
     $result1 = $pdo->query($sql1);
-    var_dump($result1->fetchAll());
-    $rowCount = $result1->rowCount();
+    $rows1 = $result1->fetchAll(PDO::FETCH_ASSOC);
+
+    $rowCount = count($rows1);
 
     if($rowCount > 0){
         echo '<h2 class="h2">海外</h2>';
         echo '<div class="img-container-wrapper">';
         echo '<button class="Arrow left" data-target="img-container-1">&lt;</button>';
         echo '<div class="img-container" id="img-container-1">';
-            while ($row = $result1->fetch(PDO::FETCH_ASSOC)) {
+            foreach ($rows1 as $row) {
                 echo '<div class="img-slide">';
                 echo '<img src="' . $row["yama_img"] . '" alt="' . $row["yama_name"] . '">';
                 echo '<p>'. $row["yama_name"]. '</p>';
@@ -45,14 +46,16 @@
     //国内の山画像
     $sql2 = "SELECT `yama_img`, `yama_name` FROM `Oasis_yama` WHERE `Region` = 0 ";
     $result2 = $pdo->query($sql2);
-    $rowCount = $result2->rowCount();
+    $rows2 = $result2->fetchAll(PDO::FETCH_ASSOC);
+
+    $rowCount = count($rows2);
 
     if($rowCount > 0){
         echo '<h2 class="h2">国内</h2>';
         echo '<div class="img-container-wrapper">';
         echo '<button class="Arrow left" data-target="img-container-2">&lt;</button>';
         echo '<div class="img-container" id="img-container-2">';
-            while ($row = $result2->fetch(PDO::FETCH_ASSOC)) {
+            foreach ($rows2 as $row) {
                 echo '<div class="img-slide">';
                 echo '<img src="' . $row["yama_img"] . '" alt="'. $row["yama_name"] . '">';
                 echo '<p>'. $row["yama_name"]. '</p>';
