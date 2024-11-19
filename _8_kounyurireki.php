@@ -11,7 +11,9 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
     <link rel="stylesheet" href="./css/stylesheet_3.css">
     <link rel="icon" href="/favicon.ico" />
     <title>購入履歴</title>
+
 </head>
+
 
     <div class="header-img">
         <input type="search" name="search">
