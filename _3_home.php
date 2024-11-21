@@ -35,8 +35,13 @@
         echo '<div class="img-container" id="img-container-1">';
             foreach ($rows1 as $row) {
                 echo '<div class="img-slide">';
-                echo '<img src="' . $row["yama_img"] . '" alt="' . $row["yama_name"] . '">';
+                echo '<form action="_4_shohin.php" method="POST">';
+                echo '<input type="hidden" name="name" value="' . htmlspecialchars($row["yama_name"], ENT_QUOTES, 'UTF-8') . '">';
+                echo '<button type="submit" class="img-transition">';
+                echo '<img src="' . $row["yama_img"] . '" alt="'. $row["yama_name"] . '">';
+                echo '</button>';
                 echo '<p>'. $row["yama_name"]. '</p>';
+                echo '</form>';
                 echo '</div>';
             }
         echo '</div>';
@@ -58,8 +63,13 @@
         echo '<div class="img-container" id="img-container-2">';
             foreach ($rows2 as $row) {
                 echo '<div class="img-slide">';
+                echo '<form action="_4_shohin.php" method="POST">';
+                echo '<input type="hidden" name="name" value="' . htmlspecialchars($row["yama_name"], ENT_QUOTES, 'UTF-8') . '">';
+                echo '<button type="submit" class="img-transition">';
                 echo '<img src="' . $row["yama_img"] . '" alt="'. $row["yama_name"] . '">';
+                echo '</button>';
                 echo '<p>'. $row["yama_name"]. '</p>';
+                echo '</form>';
                 echo '</div>';
             }
         echo '</div>';

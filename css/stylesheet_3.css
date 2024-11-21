@@ -25,7 +25,7 @@
 .img-container {
     display: flex;
     transition: transform 0.3s ease;
-
+    justify-content: space-between;
 }
 
 
@@ -33,7 +33,6 @@
     flex-shrink: 0;
     width: 20%;
     height: 200px;
-    margin-right: 10px;
     border-radius: 10px;
     text-align: center;
 }
@@ -50,6 +49,13 @@
     font-size: 14px;
 }
 
+.img-transition {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 .Arrow {
     position: absolute;
     top: 50%;
@@ -62,8 +68,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(255, 255, 255);
+    color: black;
     border-radius: 50%;
 }
 
