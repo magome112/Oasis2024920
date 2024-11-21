@@ -8,7 +8,6 @@
     <title>ホーム</title>
 </head>
 <body>
-    
     <div class="header-img">
         <input type="search" name="search">
         <img src="./images/oasislogo.jpg" width="100" height="50">
@@ -77,7 +76,13 @@
         echo '</div>';
     }
 ?>
-
+<footer>
+<hr>
+    <div class="footer">
+        <img src="./images/oasislogo.jpg" width="100" height="50">
+        <a href="./_8_kounyurireki.php">購入履歴</a>
+    </div>
+</footer>
 <script src="./javascript/userhome.js"></script>
 </body>
 </html>

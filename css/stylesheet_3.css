@@ -84,3 +84,20 @@
 .h2 {
     margin: 20px 50px;
 }
+
+.footer {
+    text-align: center;
+}
+
+.footer img {
+    float: left;
+    margin: 10px;
+}
+
+.footer a {
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    vertical-align: middle;
+    line-height: 70px;
+}
