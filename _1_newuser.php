@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stylesheet_1.css">
-    <title>アカウント作成</title>
+    <link rel="stylesheet" href="./css/stylesheet_2.css">
+    <title>新規登録</title>
 </head>
 <body>
-    <form action="_3_home.php" method="post">
-        <img src="./images/oasislogo.jpg" id="center-img" width="100" height="50">
-        <hr>
-            <div class="center">
-                <p><input type="radio" name="new" value="new">アカウント新規作成</p>
-            
-                <p>メールアドレスまたは電話番号</p>
-                <input type="text" name="mail">
-
-                <p>新しいパスワードを入力</p>
-                <input type="text" name="password">
-
-                <p><input type="submit" value="新規作成"></p>
+    <div class="login-container">
+        <h2>新規登録</h2>
+        <form action="./_3_home.php" method="POST">
+            <div class="form-group">
+                <label for="email">メールアドレスまたはユーザー名</label>
+                <input type="text" id="email" name="email" required>
             </div>
-            <div class="radio-center">
-                <p><input type="radio" name="guest" value="guest">ゲストでログイン</p>
-                <p><input type="radio" name="login" value="login">ログイン</p>
+            <div class="form-group">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" required>
             </div>
-    </form>
+            <button type="submit">新規登録</button>
+        </form>
+        <p><a href="./_2_login.php">ログインはこちら</a></p>
+    </div>
 </body>
 </html>

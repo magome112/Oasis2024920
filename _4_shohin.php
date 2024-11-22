@@ -39,15 +39,19 @@
             echo '<img id="mt_img" src="' . $result['yama_img'] . '" alt="' . $result['yama_name'] . '" />';  // 画像
             echo '</div>';
             echo '<div class="body_text">';
-            echo '<p>' . $result['yama_name'] . '￥' . $result['price'] . '</p>';  // 山の名前と価格
+            echo '<label>' . $result['yama_name'] . '</label>'; 
+            echo '<label>' . '￥' . $result['price'] . '</label>'; // 山の名前と価格
             echo '</div>';
-            echo '<p>' . $result['yama_info'] . '</p>';
+            echo '<div class="text_container">';
+            echo '<p id="mt_imfo">' . $result['yama_info'] . '</p>';
+            echo '</div>';
     
-            // 購入やレンタルリンク
-            echo '<a href="./_5_kounyu.php" id="buy">購入する</a>';
-            echo '<a href="./_9_rentaru.php" id="rental">レンタルする</a>';
-            echo '<a href="./_7_review.php" id="review">レビューを見る</a>';
-
+            // それぞれのボタン
+            echo '<div class="btn_container">';
+            echo '<a href="./_5_kounyu.php" id="btn_buy">購入する</a>';
+            echo '<a href="./_9_rentaru.php" id="btn_rental">レンタルする</a>';
+            echo '<a href="./_7_review.php" id="btn_review">レビューを見る</a>';
+            echo '</div>';
             
     }
     ?>
