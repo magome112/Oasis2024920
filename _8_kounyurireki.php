@@ -35,20 +35,22 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
         
         .search-bar input[type="text"] {
             padding: 5px;
+            width: 200px; /* 検索バーの幅 */
         }
 
         .login {
             margin-left: 10px;
+            font-weight: bold;
         }
 
         /* ロゴ部分を中央に配置 */
-        .header-img {
+        .header-logo {
             text-align: center;
-            padding: 20px 0;
+            flex-grow: 1;
         }
 
-        .header-img img {
-            width: 200px; /* ロゴの幅を指定 */
+        .header-logo img {
+            width: 150px; /* ロゴの幅を指定 */
             height: auto;
         }
 
@@ -88,14 +90,15 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
         <div class="search-bar">
             <input type="text" placeholder="検索">
         </div>
+
+        <!-- ロゴ部分 -->
+        <div class="header-logo">
+            <a href="<?php echo $redirectUrl; ?>"><img src="<?php echo $imageUrl; ?>" alt="Oasis ロゴ"></a>
+        </div>
+
         <div class="login">ログイン</div>
     </div>
 
-    <!-- ロゴ部分 -->
-    <div class="header-img">
-        <a href="<?php echo $redirectUrl; ?>"><img src="<?php echo $imageUrl; ?>" alt="Oasis ロゴ"></a>
-    </div>
-    
     <hr>
 
     <!-- 購入履歴 -->
