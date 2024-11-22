@@ -1,40 +1,26 @@
-<?php
-/*データベース接続情報
-$host = 'localhost';
-$dbname = 'ecommerce';
-$username = 'LAA1553845';
-$password = 'pass1234';
-
-
-    // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
-    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
-                    dbname=LAA1602729-oasis;charset=utf8',
-                    'LAA1602729',
-                    'oasis5');
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet_2.css">
     <title>ログイン</title>
 </head>
 <body>
-    <form action="_3_home.php" method="post">
-        <p><h3><input type="radio" name="login">ログイン</h3></p>
-        <p><h4>メールアドレスまたは電話番号</h4></p>
-        <h3><input type="text" name="u_mail"></h3>
-        <h3>パスワードを入力</h3>
-        <h3><input type="text" name="u_password"></h3>
-        <input type="submit" value="次に進む">
-        <br>
-        <input type="radio" name="guest/newuser" value="ゲストでログイン">
-        <input type="radio" name="guest/newuser" value="アカウント新規作成">
-    </form>
+    <div class="login-container">
+        <h2>ログイン</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">メールアドレスまたはユーザー名</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">ログイン</button>
+        </form>
+        <p><a href="./_1_newuser.php">新規登録はこちら</a></p>
+    </div>
 </body>
 </html>
