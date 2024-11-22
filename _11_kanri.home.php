@@ -20,7 +20,12 @@ $password = 'pass1234';
 </head>
 <body>
     <div style="background-color: #27476C; width:100px; padding:500px; border:1px solid #ccc">
-        <div style="text-align: left;"><img src="aikon.png" width="150" height="75"></div>
-
-</div> 
+        <div style="text-align: left;"><img src="aikon.png" width="150" height="75">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="file">画像を選択:</label>
+        <input type="file" name="file" id="file">
+        <input type="submit" value="アップロード">
+        </form>
+        </div>
+    </div> 
 </body>
