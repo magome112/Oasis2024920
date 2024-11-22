@@ -6,13 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    ]    
+    <div class="header-img">
+        <input type="search" name="search">
+        <img src="./images/oasislogo.jpg" width="100" height="50">
+    </div>
+    <hr>
+
 <?php
     $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
                     dbname=LAA1602729-oasis;charset=utf8',
                     'LAA1602729',
                     'oasis5');
 
-    $sql1 = "SELECT `yama_img`, `yama_name` FROM `Oasis_yama` WHERE `Region` = 1 ";
+    $sql1 = "SELECT '*' FROM `Oasis_yama`";
     $result1 = $pdo->query($sql1);
     var_dump($result1->fetchAll());
     $rowCount = $result1->rowCount();
