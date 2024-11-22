@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>購入情報入力</title>
 </head>
 <body>
+    <fieldset>
     <h2>1.レンタル情報</h2>
     <form action="" method="POST">
         <!-- 国/地域 -->
@@ -70,7 +71,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- 電話番号 -->
         <label for="u_tell">電話番号</label>
         <input type="text" id="u_tell" name="u_tell" required><br><br>  <!-- 電話番号フィールドを追加 -->
-
+    </fieldset>
+    <fieldset>
         <h2>2.お支払方法</h2>
         <!-- 支払方法 -->
         <label for="payment"></label><br>
@@ -84,11 +86,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </label>
         <label>
             <input type="radio" name="payment" value="PayPay" required>
-            <img src="./images/Paypay.png" alt="PayPay" width="100">
+            <img src="./images/Paypay.jpg" alt="PayPay" width="100">
         </label>
         <br><br>
+    </fieldset>
 
-        <!-- レンタル期間 -->
+    <fieldset>    
+         <!-- レンタル期間 -->
         <h2>3.レンタル期間</h2>
         <label for="rental_start">開始日:</label>
         <!-- カレンダー形式で選択 -->
@@ -97,6 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="rental_finish">終了日:</label>
         <!-- カレンダー形式で選択 -->
         <input type="date" name="rental_finish" required><br><br>
+    </fieldset>
 
         <fieldset>
             <input type="checkbox" name="kiyaku" required>

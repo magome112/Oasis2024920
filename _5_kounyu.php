@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>購入情報入力</title>
 </head>
 <body>
+    <fieldset>
     <h2>1.購入者様情報</h2>
     <form action="" method="POST">
         <label for="purchaser_country">国/地域:</label>
@@ -54,7 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <label for="purchaser_name">氏名</label>
         <input type="text" id="purchaser_name" name="purchaser_name" required><br><br>
-
+    </fieldset>
+    <fieldset>
             <h2>2.お支払方法</h2>
 
         <label for="payment"></label><br>
@@ -68,12 +70,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </label>
         <label>
             <input type="radio" name="payment" value="PayPay" required>
-            <img src="./images/Paypay.png" alt="PayPay" width="100">
+            <img src="./images/Paypay.jpg" alt="PayPay" width="100">
         </label>
         <label>
             <input type="radio" name="payment" value="RPay" required>
             <img src="./images/rpay.png" alt="RPay" width="100">
         </label>
+    </fieldset>
         <br><br>
 
         <fieldset>
