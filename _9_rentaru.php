@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>1.レンタル情報</h2>
     <form action="" method="POST">
         <!-- 国/地域 -->
-        <label for="purchaser_country">国/地域:</label>
+        <label for="purchaser_country">国/地域</label>
         <select id="purchaser_country" name="purchaser_country" required>
             <option value="日本">日本</option>
             <option value="アメリカ">アメリカ</option>
@@ -60,20 +60,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </select><br><br>
 
         <!-- 購入者名 -->
-        <label for="purchaser_user_name">購入者名:</label>
+        <label for="purchaser_user_name">氏名</label>
         <input type="text" id="purchaser_user_name" name="purchaser_user_name" required><br><br> <!-- 修正: purchaser_name -> purchaser_user_name -->
 
         <!-- 住所 -->
-        <label for="u_address">住所:</label>
+        <label for="u_address">住所</label>
         <input type="text" id="u_address" name="u_address" required><br><br>
 
         <!-- 電話番号 -->
-        <label for="u_tell">電話番号:</label>
+        <label for="u_tell">電話番号</label>
         <input type="text" id="u_tell" name="u_tell" required><br><br>  <!-- 電話番号フィールドを追加 -->
 
         <h2>2.お支払方法</h2>
         <!-- 支払方法 -->
-        <label for="payment">支払方法:</label><br>
+        <label for="payment"></label><br>
         <label>
             <input type="radio" name="payment" value="VISA" required>
             <img src="./images/visa.png" alt="VISA" width="100">
