@@ -26,6 +26,30 @@ $password = 'pass1234';
         <input type="file" name="file" id="file">
         <input type="submit" value="アップロード">
         </form>
+        <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['file']['tmp_name'];
+        $fileName = $_FILES['file']['name'];
+        $uploadFileDir = './uploaded_files/';
+        
+        if (move_uploaded_file($fileTmpPath, $uploadFileDir . $fileName)) {
+            echo 'ファイルが正常にアップロードされました。';
+        } else {
+            echo 'ファイルのアップロードに失敗しました。';
+        }
+    } else {
+        echo 'ファイルのアップロード中にエラーが発生しました。';
+    }
+}
+
+$allowedExts = array('jpg', 'jpeg', 'png', 'gif');
+$extension = pathinfo($fileName, PATHINFO_EXTENSION);
+if (!in_array($extension, $allowedExts)) {
+    echo 'この形式のファイルはアップロードできません。';
+    exit;
+}
+?>
         </div>
     </div> 
 </body>
