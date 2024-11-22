@@ -41,5 +41,32 @@
 }
 
 .btn_container {
-    
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+#btn_buy, #btn_rental, #btn_review {
+    width: 100%;
+    background-color: gray;
+    color: white; /* 文字色 */
+    text-align: center; /* テキストを中央に */
+    display: inline-block; /* インラインブロック要素として表示 */
+    padding: 10px 20px; /* ボタン内の余白（縦10px、横20px） */
+    font-size: 16px;
+    text-decoration: none; /* リンクの下線を削除 */
+    border-radius: 12px; /* 角を丸くする */
+    transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを追加 */
+}
+
+#btn_buy:hover {
+    background-color: #4b9c60;
+}
+#btn_rental:hover {
+    background-color: #2e7d3d;
+}
+#btn_review:hover {
+    background-color: #1a4d24;
 }
