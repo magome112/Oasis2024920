@@ -22,12 +22,17 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
         </div>
         <div class="login">ログイン</div>
     </div>
+    <body>
+    <div class="header-img">
+            <a href="./_3_home.php"><img src="./images/oasislogo.jpg" width="100" height="50"></a>
+        </div>
+        <hr>
 
 
-        <input type="search" name="search">
+        
         <img src="./images/oasislogo.jpg" width="100" height="50">
     </div>
-    <hr>
+   
 
 
     <?php
@@ -63,18 +68,24 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
             font-size: 24px;
             font-weight: bold;
             color: black;
-        }          
+        }    
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px; /* 必要に応じて高さを調整 */
+        }
+
+        .logo-container img {
+            width: 200px; /* ロゴの幅を指定 */
+            height: auto; /* アスペクト比を維持 */
+        }
         
         .history-container {
             padding: 20px;
         }
-        .history-item {
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+       
         .history-item img {
             width: 200px;
             height: auto;
