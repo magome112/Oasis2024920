@@ -11,20 +11,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
 
             // 現在のtransform値を取得
-            const transformMatrix = getComputedStyle(container).transform;
-            const currentTransform = transformMatrix === 'none' ? 0 : parseInt(transformMatrix.split(',')[4]);
-            
+            const currentTransform = parseInt(getComputedStyle(container).transform.split(',')[4]) || 0;
 
             let newTransform;
 
             if (arrow.classList.contains('left')) {
                 // 左ボタンクリック時
                 newTransform = Math.min(0, currentTransform + slideWidth); // 左端を超えない
+
+                // 最後の画像まで移動したら最初に戻る
+                if (currentTransform === 0) {
+                    newTransform = -((slides.length - 1) * slideWidth);
+                }
             } else {
                 // 右ボタンクリック時
-                const containerWidth = container.offsetWidth; // コンテナの幅を取得
-                const maxScroll = (slides.length * slideWidth) * containerWidth; // 最大スクロール量を計算
-                newTransform = Math.max(-maxScroll, Math.min(0,currentTransform - slideWidth));
+                const maxScroll = (slides.length - 5) * slideWidth; // 右端を超えない
+                newTransform = Math.max(-maxScroll, currentTransform - slideWidth);
+
+                // 最後の画像まで移動したら最初に戻る
+                if (currentTransform === -maxScroll) {
+                    newTransform = 0;
+                }
             }
 
             container.style.transform = `translateX(${newTransform}px)`;
