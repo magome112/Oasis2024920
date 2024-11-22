@@ -22,12 +22,17 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
         </div>
         <div class="login">ログイン</div>
     </div>
+    <body>
+    <div class="header-img">
+            <a href="./_3_home.php"><img src="./images/oasislogo.jpg" width="100" height="50"></a>
+        </div>
+        <hr>
 
 
         
         <img src="./images/oasislogo.jpg" width="100" height="50">
     </div>
-    <hr>
+   
 
 
     <?php
