@@ -20,6 +20,26 @@
 }
 
 .body_text {
-    text-align: center;
-    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.body_text label {
+    font-size: 27px;
+}
+
+.text_container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+#mt_info {
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.btn_container {
+    
 }
