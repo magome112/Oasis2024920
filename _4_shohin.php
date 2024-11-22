@@ -48,9 +48,9 @@
     
             // それぞれのボタン
             echo '<div class="btn_container">';
-            echo '<a href="./_5_kounyu.php" id="buy">購入する</a>';
-            echo '<a href="./_9_rentaru.php" id="rental">レンタルする</a>';
-            echo '<a href="./_7_review.php" id="review">レビューを見る</a>';
+            echo '<a href="./_5_kounyu.php" id="btn_buy">購入する</a>';
+            echo '<a href="./_9_rentaru.php" id="btn_rental">レンタルする</a>';
+            echo '<a href="./_7_review.php" id="btn_review">レビューを見る</a>';
             echo '</div>';
             
     }
