@@ -51,7 +51,7 @@
 #btn_buy, #btn_rental, #btn_review {
     width: 100%;
     background-color: gray;
-    color: #000; /* 文字色 */
+    color: white; /* 文字色 */
     text-align: center; /* テキストを中央に */
     display: inline-block; /* インラインブロック要素として表示 */
     padding: 10px 20px; /* ボタン内の余白（縦10px、横20px） */
@@ -62,11 +62,11 @@
 }
 
 #btn_buy:hover {
-    background-color: #4c9900;
+    background-color: #4b9c60;
 }
 #btn_rental:hover {
-    background-color: #009900;
+    background-color: #2e7d3d;
 }
 #btn_review:hover {
-    background-color: #00994c;
+    background-color: #1a4d24;
 }
