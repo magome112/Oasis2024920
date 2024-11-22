@@ -11,6 +11,10 @@
         <h2>新規登録</h2>
         <form action="./_3_home.php" method="POST">
             <div class="form-group">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
                 <label for="email">メールアドレスまたはユーザー名</label>
                 <input type="text" id="email" name="email" required>
             </div>
