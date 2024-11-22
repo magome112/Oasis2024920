@@ -11,11 +11,79 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
     <link rel="stylesheet" href="./css/stylesheet_3.css">
     <link rel="icon" href="/favicon.ico" />
     <title>購入履歴</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* ヘッダー部分のスタイル */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-bar input[type="text"] {
+            padding: 5px;
+        }
+
+        .login {
+            margin-left: 10px;
+        }
+
+        /* ロゴ部分を中央に配置 */
+        .header-img {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header-img img {
+            width: 200px; /* ロゴの幅を指定 */
+            height: auto;
+        }
+
+        /* 購入履歴のスタイル */
+        .history-container {
+            padding: 20px;
+        }
+
+        .history-item img {
+            width: 200px;
+            height: auto;
+        }
+
+        .history-details {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .purchase-info {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .rental-tag {
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
-
-    
+<body>
+    <!-- ヘッダー -->
     <div class="header">
         <div class="search-bar">
             <input type="text" placeholder="検索">
@@ -23,88 +91,14 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
         <div class="login">ログイン</div>
     </div>
 
-
-        
-        <img src="./images/oasislogo.jpg" width="100" height="50">
+    <!-- ロゴ部分 -->
+    <div class="header-img">
+        <a href="<?php echo $redirectUrl; ?>"><img src="<?php echo $imageUrl; ?>" alt="Oasis ロゴ"></a>
     </div>
+    
     <hr>
 
-
-    <?php
-    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
-                    dbname=LAA1602729-oasis;charset=utf8',
-                    'LAA1602729',
-                    'oasis5');
-    ?>
-
-<style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-        
-        
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-        .search-bar input[type="text"] {
-            padding: 5px;
-        }
-
-    
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }    
-        
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px; /* 必要に応じて高さを調整 */
-        }
-
-        .logo-container img {
-            width: 200px; /* ロゴの幅を指定 */
-            height: auto; /* アスペクト比を維持 */
-        }
-        
-        .history-container {
-            padding: 20px;
-        }
-       
-        .history-item img {
-            width: 200px;
-            height: auto;
-        }
-        .history-details {
-            padding: 20px;
-            flex: 1;
-        }
-        .purchase-info {
-            margin-bottom: 10px;
-        }
-        .label {
-            font-weight: bold;
-        }
-        .rental-tag {
-            color: orange;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    
-      
-
+    <!-- 購入履歴 -->
     <div class="history-container">
         <h1>購入履歴</h1>
 

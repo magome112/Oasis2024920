@@ -9,3 +9,37 @@
     max-width: 100%;
     max-height: 100%;
 }
+
+.body_img {
+    text-align: center;
+}
+
+#mt_img {
+    width: 600px;
+    height: 300px;
+}
+
+.body_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.body_text label {
+    font-size: 27px;
+}
+
+.text_container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+#mt_info {
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.btn_container {
+    
+}

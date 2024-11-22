@@ -1,14 +1,9 @@
 <?php
-// データベース接続情報
-$host = 'mysql305.phy.lolipop.lan';
-$dbname = 'LAA1553845-2024php';
-$username = 'LAA1553845';
-$password = 'pass1234';
+    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+                    dbname=LAA1602729-oasis;charset=utf8',
+                    'LAA1602729',
+                    'oasis5');
 
-
-    // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +14,12 @@ $password = 'pass1234';
     <title>レビュー記入</title>
 </head>
 <body>
-    <form action="_7_review.php" method="post" enctype="multipart/form-data">
-    <img src="./images/oasislogo.jpg">
+<div class="header-img">
+        <input type="search" name="search">
+        <img src="./images/oasislogo.jpg" width="100" height="50">
+    </div>
     <hr>
+    <form action="_7_review.php" method="post" enctype="multipart/form-data">
 
     <h1>レビューの記入</h1>
     <p><h5>総合評価(必須)</h5><input type="radio" name="star" value="5">
@@ -34,5 +32,7 @@ $password = 'pass1234';
 
     <h5>画像アップロード(任意)</h5><input type="file" name="upload" accept="image/*">
     </form>
+    <button></button>
+
 </body>
 </html>
