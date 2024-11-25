@@ -11,78 +11,7 @@
         <input type="search" name="search">
         <img src="./images/oasislogo.jpg" width="100" height="50">
     </div>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* ヘッダー部分のスタイル */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-            background-color: #f0f0f0;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-        
-        .search-bar input[type="text"] {
-            padding: 5px;
-            width: 200px; /* 検索バーの幅 */
-        }
-
-        .login {
-            margin-left: 10px;
-            font-weight: bold;
-        }
-
-        /* ロゴ部分を中央に配置 */
-        .header-logo {
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        .header-logo img {
-            width: 150px; /* ロゴの幅を指定 */
-            height: auto;
-        }
-
-        /* 購入履歴のスタイル */
-        .history-container {
-            padding: 20px;
-        }
-
-        .history-item img {
-            width: 200px;
-            height: auto;
-        }
-
-        .history-details {
-            padding: 20px;
-            flex: 1;
-        }
-
-        .purchase-info {
-            margin-bottom: 10px;
-        }
-
-        .label {
-            font-weight: bold;
-        }
-
-        .rental-tag {
-            color: orange;
-            font-weight: bold;
-        }
-    </style>
-</head>
+   
 
     <hr>
     <form action="_7_review.php" method="post" enctype="multipart/form-data">
