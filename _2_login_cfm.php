@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
     $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
                         dbname=LAA1602729-oasis;charset=utf8',
                         'LAA1602729',
@@ -20,7 +18,7 @@ session_start();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         //入力した情報とデータベースの情報が一致するか
-        if ($user && password_verify($password, $user['u_password'])) {
+        if ($user && password_verify($pass, $user['u_password'])) {
             $_SESSION['user_id'] = $user['u_id'];
             $_SESSION['user_name'] = $user['u_name'];
 
