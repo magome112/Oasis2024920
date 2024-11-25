@@ -18,6 +18,10 @@
         $stmt->bindParam(':u_password', $pass);
         $stmt->execute();
 
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $_SESSION['user_id'] = $user['u_id'];
+        $_SESSION['user_name'] = $user['u_name'];
+
         // ホーム画面にリダイレクト
         header('Location: _3_home.php');
         exit();

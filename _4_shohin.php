@@ -8,10 +8,9 @@
 </head>
 <body>
     <div class="header-img">
-            <a href="./_3_home.php"><img src="./images/oasislogo.jpg" width="100" height="50"></a>
-        </div>
-        <hr>
-
+        <a href="./_3_home.php"><img src="./images/oasislogo.jpg" width="100" height="50"></a>
+    </div>
+    <hr>
 
 <?php
     // データベース接続（PDO）
@@ -34,28 +33,39 @@
         // 結果を取得
         $result = $stmt->fetch(PDO::FETCH_ASSOC);  // 1件の結果を連想配列として取得
     
-            // 取得したデータを表示
-            echo '<div class="body_img">';
-            echo '<img id="mt_img" src="' . $result['yama_img'] . '" alt="' . $result['yama_name'] . '" />';  // 画像
-            echo '</div>';
-            echo '<div class="body_text">';
-            echo '<label>' . $result['yama_name'] . '</label>'; 
-            echo '<label>' . '￥' . $result['price'] . '</label>'; // 山の名前と価格
-            echo '</div>';
-            echo '<div class="text_container">';
-            echo '<p id="mt_imfo">' . $result['yama_info'] . '</p>';
-            echo '</div>';
+        // 取得したデータを表示
+        echo '<div class="body_img">';
+        echo '<img id="mt_img" src="' . $result['yama_img'] . '" alt="' . $result['yama_name'] . '" />';  // 画像
+        echo '</div>';
+        echo '<div class="body_text">';
+        echo '<label>' . $result['yama_name'] . '</label>'; 
+        echo '<label>' . '￥' . $result['price'] . '</label>'; // 山の名前と価格
+        echo '</div>';
+        echo '<div class="text_container">';
+        echo '<p id="mt_imfo">' . $result['yama_info'] . '</p>';
+        echo '</div>';
     
-            // それぞれのボタン
-            echo '<div class="btn_container">';
-            echo '<a href="./_5_kounyu.php" id="btn_buy">購入する</a>';
-            echo '<a href="./_9_rentaru.php" id="btn_rental">レンタルする</a>';
-            echo '<a href="./_7_review.php" id="btn_review">レビューを見る</a>';
-            echo '</div>';
-            
+        // 購入・レンタル用のフォームを表示
+        echo '<div class="btn_container">';
+        
+        // 購入フォーム
+        echo '<form action="_5_kounyu.php" method="POST">';
+        echo '<input type="hidden" name="yama_id" value="' . $result['yama_id'] . '">';
+        echo '<input type="hidden" name="yama_name" value="' . $result['yama_name'] . '">';
+        echo '<input type="hidden" name="yama_price" value="' . $result['price'] . '">';
+        echo '<input type="submit" id="btn_buy" value="購入する">';
+        echo '</form>';
+        
+        // レンタルフォーム
+        echo '<form action="_9_rentaru.php" method="POST">';
+        echo '<input type="hidden" name="yama_id" value="' . $result['yama_id'] . '">';
+        echo '<input type="hidden" name="yama_name" value="' . $result['yama_name'] . '">';
+        echo '<input type="hidden" name="yama_price" value="' . $result['price'] . '">';
+        echo '<input type="submit" id="btn_rental" value="レンタルする">';
+        echo '</form>';
+        
+        echo '</div>';
     }
-    ?>
-
+?>
 </body>
 </html>
-

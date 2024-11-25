@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // ログインしていない場合、ログイン画面にリダイレクト
+    header('Location: _2_login.php');
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
