@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>ログイン</h2>
-        <form action="./_3_home.php" method="POST">
+        <form action="./_2_login_cfm.php" method="POST">
             <div class="form-group">
                 <label for="email">メールアドレスまたはユーザー名</label>
                 <input type="text" id="email" name="email" required>
