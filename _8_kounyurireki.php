@@ -33,7 +33,7 @@ try {
     $rentalSql = "
         SELECT 
             r.purchaser_country, r.purchaser_user_name, r.u_address, r.u_tell, r.payment, 
-            r.rental_start, r.rental_finish, y.yama_name, y.yama_img, y.price
+            r.rental_start, r.rental_finish, y.yama_name, y.yama_img, y.dayprice
         FROM 
             Oasis_rental r
         INNER JOIN 
@@ -104,9 +104,18 @@ try {
                 <th>レンタル終了日</th>
                 <th>山の名前</th>
                 <th>山の画像</th>
-                <th>値段</th>
+                <th>レンタル料金</th>
             </tr>
             <?php foreach ($rentalHistory as $rental): ?>
+                <?php 
+                    // レンタル日数を計算
+                    $rentalStartDate = strtotime($rental['rental_start']);
+                    $rentalFinishDate = strtotime($rental['rental_finish']);
+                    $rentalDays = ($rentalFinishDate - $rentalStartDate) / (60 * 60 * 24); // 日数を計算
+
+                    // レンタル料金を計算
+                    $rentalPrice = $rental['dayprice'] * $rentalDays;
+                ?>
                 <tr>
                     <td><?= htmlspecialchars($rental['purchaser_country'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><?= htmlspecialchars($rental['purchaser_user_name'], ENT_QUOTES, 'UTF-8') ?></td>
@@ -117,7 +126,7 @@ try {
                     <td><?= date('Y年m月d日', strtotime($rental['rental_finish'])) ?></td>
                     <td><?= htmlspecialchars($rental['yama_name'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><img src="<?= htmlspecialchars($rental['yama_img'], ENT_QUOTES, 'UTF-8') ?>" alt="山の画像" width="100"></td>
-                    <td><?= htmlspecialchars($rental['price'], ENT_QUOTES, 'UTF-8') ?>円</td>
+                    <td><?= number_format($rentalPrice) ?>円</td> <!-- 計算されたレンタル料金を表示 -->
                 </tr>
             <?php endforeach; ?>
         </table>
