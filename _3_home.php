@@ -15,21 +15,10 @@
     <hr>
 
 <?php
-    if (!empty($_POST)) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $pass = $_POST['password'];
-        $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
-    }
-
     $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
                     dbname=LAA1602729-oasis;charset=utf8',
                     'LAA1602729',
                     'oasis5');
-
-    $stmt = $pdo->prepare("INSERT INTO Oasis_user (u_name, u_mail, u_password) VALUES (?, ?, ?)");
-    $stmt->bindParam("ss", $name, $email, $hashed_pass);
-    $stmt->execute();
 
 
     //海外の山画像
