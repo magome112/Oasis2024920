@@ -3,7 +3,7 @@ session_start();
 
 // ユーザーがログインしていない場合、ログインページにリダイレクト
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: /_2_login.php');
     exit;
 }
 
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $price = $_POST['price']; // 選択された山の価格
 
         // 注文情報をデータベースに保存
-        $sql = "INSERT INTO Oasis_kounyutyumon (u_id, yama_id, payment, order_date, price, purchaser_country, purchaser_name, u_address) 
+        $sql = "INSERT INTO Oasis_buy (u_id, yama_id, payment, order_date, price, purchaser_country, purchaser_name, u_address) 
                 VALUES (:u_id, :yama_id, :payment, CURDATE(), :price, :purchaser_country, :purchaser_name, :u_address)";
         
         $stmt = $pdo->prepare($sql);
