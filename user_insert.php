@@ -1,4 +1,3 @@
-<!-- 新規登録画面で入力した情報をデータベースに挿入し、_3_home.phpにリダイレクトする画面 -->
 <?php
     $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
                     dbname=LAA1602729-oasis;charset=utf8',
