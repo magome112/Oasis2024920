@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #4d4d4d;
+    background-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #191970;
+    background-color: #CC8E00;
     color: white;
     border: none;
     border-radius: 4px;
@@ -52,7 +52,7 @@ button {
 }
 
 button:hover {
-    background-color: #333333;
+    background-color: #9C7B00;
 }
 
 a {
