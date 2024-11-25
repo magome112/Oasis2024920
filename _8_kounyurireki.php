@@ -18,7 +18,7 @@ try {
         SELECT 
             p.purchaser_country, p.purchaser_name, p.u_address, p.payment, y.yama_name, y.yama_img, y.price
         FROM 
-            Oasis_kounyutyumon p
+            Oasis_buy p
         INNER JOIN 
             Oasis_yama y ON p.yama_id = y.yama_id
         WHERE 
