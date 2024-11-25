@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>新規登録</h2>
-        <form action="./user_insert.php" method="POST">
+        <form action="./_1_user_insert.php" method="POST">
             <div class="form-group">
                 <label for="name">お名前</label>
                 <input type="text" id="name" name="name" required>
