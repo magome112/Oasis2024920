@@ -18,7 +18,7 @@ session_start();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         //入力した情報とデータベースの情報が一致するか
-        if ($user && password_verify($pass, $user['m_password'])) {
+        if ($user && $pass === $user['m_password']) {
             $_SESSION['user_id'] = $user['m_id'];
             $_SESSION['user_name'] = $user['m_name'];
 
