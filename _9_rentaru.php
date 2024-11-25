@@ -36,21 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // フォームデータを取得
         $u_address = htmlspecialchars($_POST['u_address'], ENT_QUOTES, 'UTF-8');
         $purchaser_country = htmlspecialchars($_POST['purchaser_country'], ENT_QUOTES, 'UTF-8');
-        $purchaser_user_name = htmlspecialchars($_POST['purchaser_user_name'], ENT_QUOTES, 'UTF-8');
+        $purchaser_u_name = htmlspecialchars($_POST['purchaser_u_name'], ENT_QUOTES, 'UTF-8');
         $u_tell = htmlspecialchars($_POST['u_tell'], ENT_QUOTES, 'UTF-8');
         $payment = htmlspecialchars($_POST['payment'], ENT_QUOTES, 'UTF-8');
         $rental_start = htmlspecialchars($_POST['rental_start'], ENT_QUOTES, 'UTF-8');
         $rental_finish = htmlspecialchars($_POST['rental_finish'], ENT_QUOTES, 'UTF-8');
 
         // レンタル情報をデータベースに登録
-        $sql = "INSERT INTO Oasis_rental (u_id, yama_id, purchaser_country, purchaser_user_name, u_address, u_tell, payment, rental_start, rental_finish, order_date, pay_confirmation_flag) 
-                VALUES (:u_id, :yama_id, :purchaser_country, :purchaser_user_name, :u_address, :u_tell, :payment, :rental_start, :rental_finish, CURDATE(), 0)";
+        $sql = "INSERT INTO Oasis_rental (u_id, yama_id, purchaser_country, purchaser_u_name, u_address, u_tell, payment, rental_start, rental_finish, order_date, pay_confirmation_flag) 
+                VALUES (:u_id, :yama_id, :purchaser_country, :purchaser_u_name, :u_address, :u_tell, :payment, :rental_start, :rental_finish, CURDATE(), 0)";
         
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':u_id', $user_id);
         $stmt->bindParam(':yama_id', $yama_id);
         $stmt->bindParam(':purchaser_country', $purchaser_country);
-        $stmt->bindParam(':purchaser_user_name', $purchaser_user_name);
+        $stmt->bindParam(':purchaser_u_name', $purchaser_u_name);
         $stmt->bindParam(':u_address', $u_address);
         $stmt->bindParam(':u_tell', $u_tell);
         $stmt->bindParam(':payment', $payment);
@@ -118,8 +118,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="オーストラリア">オーストラリア</option>
             </select><br><br>
 
-            <label for="purchaser_user_name">氏名:</label>
-            <input type="text" id="purchaser_user_name" name="purchaser_user_name" required><br><br>
+            <label for="purchaser_u_name">氏名:</label>
+            <input type="text" id="purchaser_u_name" name="purchaser_u_name" required><br><br>
 
             <label for="u_address">住所:</label>
             <input type="text" id="u_address" name="u_address" required><br><br>

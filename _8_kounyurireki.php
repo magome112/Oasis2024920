@@ -16,7 +16,7 @@ try {
     // 購入情報を取得 (購入テーブルと山情報をJOIN)
     $purchaseSql = "
         SELECT 
-            p.purchaser_country, p.purchaser_name, p.u_address, p.payment, y.yama_name, y.yama_img, y.price
+            p.purchaser_country, p.purchaser_user_name, p.u_address, p.payment, y.yama_name, y.yama_img, y.price
         FROM 
             Oasis_buy p
         INNER JOIN 
@@ -32,7 +32,7 @@ try {
     // レンタル情報を取得 (レンタルテーブルと山情報をJOIN)
     $rentalSql = "
         SELECT 
-            r.purchaser_country, r.purchaser_user_name, r.u_address, r.u_tell, r.payment, 
+            r.purchaser_country, r.purchaser_u_name, r.u_address, r.u_tell, r.payment, 
             r.rental_start, r.rental_finish, y.yama_name, y.yama_img, y.dayprice
         FROM 
             Oasis_rental r
@@ -77,7 +77,7 @@ try {
             <?php foreach ($purchaseHistory as $purchase): ?>
                 <tr>
                     <td><?= htmlspecialchars($purchase['purchaser_country'], ENT_QUOTES, 'UTF-8') ?></td>
-                    <td><?= htmlspecialchars($purchase['purchaser_name'], ENT_QUOTES, 'UTF-8') ?></td>
+                    <td><?= htmlspecialchars($purchase['purchaser_user_name'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><?= htmlspecialchars($purchase['u_address'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><?= htmlspecialchars($purchase['payment'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><?= htmlspecialchars($purchase['yama_name'], ENT_QUOTES, 'UTF-8') ?></td>
@@ -118,7 +118,7 @@ try {
                 ?>
                 <tr>
                     <td><?= htmlspecialchars($rental['purchaser_country'], ENT_QUOTES, 'UTF-8') ?></td>
-                    <td><?= htmlspecialchars($rental['purchaser_user_name'], ENT_QUOTES, 'UTF-8') ?></td>
+                    <td><?= htmlspecialchars($rental['purchaser_u_name'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><?= htmlspecialchars($rental['u_address'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><?= htmlspecialchars($rental['u_tell'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><?= htmlspecialchars($rental['payment'], ENT_QUOTES, 'UTF-8') ?></td>

@@ -19,14 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // フォームデータを取得
         $u_address = htmlspecialchars($_POST['u_address'], ENT_QUOTES, 'UTF-8');
         $purchaser_country = htmlspecialchars($_POST['purchaser_country'], ENT_QUOTES, 'UTF-8');
-        $purchaser_name = htmlspecialchars($_POST['purchaser_name'], ENT_QUOTES, 'UTF-8');
+        $purchaser_user_name = htmlspecialchars($_POST['purchaser_user_name'], ENT_QUOTES, 'UTF-8');
         $payment = htmlspecialchars($_POST['payment'], ENT_QUOTES, 'UTF-8');
         $yama_id = $_POST['yama_id']; // 選択された山のID
         $price = $_POST['price']; // 選択された山の価格
 
         // 注文情報をデータベースに保存
-        $sql = "INSERT INTO Oasis_buy (u_id, yama_id, payment, order_date, price, purchaser_country, purchaser_name, u_address) 
-                VALUES (:u_id, :yama_id, :payment, CURDATE(), :price, :purchaser_country, :purchaser_name, :u_address)";
+        $sql = "INSERT INTO Oasis_buy (u_id, yama_id, payment, order_date, price, purchaser_country, purchaser_user_name, u_address) 
+                VALUES (:u_id, :yama_id, :payment, CURDATE(), :price, :purchaser_country, :purchaser_user_name, :u_address)";
         
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':u_id', $user_id);
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':payment', $payment);
         $stmt->bindParam(':price', $price);
         $stmt->bindParam(':purchaser_country', $purchaser_country);
-        $stmt->bindParam(':purchaser_name', $purchaser_name);
+        $stmt->bindParam(':purchaser_user_name', $purchaser_user_name);
         $stmt->bindParam(':u_address', $u_address);
         $stmt->execute();
 
@@ -85,8 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="u_address">住所:</label>
             <input type="text" id="u_address" name="u_address" required><br><br>
 
-            <label for="purchaser_name">氏名:</label>
-            <input type="text" id="purchaser_name" name="purchaser_name" required><br><br>
+            <label for="purchaser_user_name">氏名:</label>
+            <input type="text" id="purchaser_user_name" name="purchaser_user_name" required><br><br>
         </fieldset>
 
         <fieldset>
