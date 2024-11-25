@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['user_id'])) {
     // ログインしていない場合、ログイン画面にリダイレクト
-    header('Location: login.php');
+    header('Location: _2_login.php');
     exit();
 }
 
