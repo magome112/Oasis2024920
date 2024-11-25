@@ -35,9 +35,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購入情報入力</title>
+    <link rel="stylesheet" href="./css/stylesheet_3.css">
+    <link rel="icon" href="/favicon.ico" />
+    <title>購入情報入力 </title>
 </head>
 <body>
+    <!--ロゴの画像-->
+    <div class="header-img">
+        <input type="search" name="search">
+        <img src="./images/oasislogo.jpg" width="100" height="50">
+    </div>
+    <hr>
+
     <fieldset>
     <h2>1.購入者様情報</h2>
     <form action="" method="POST">
@@ -71,10 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label>
             <input type="radio" name="payment" value="PayPay" required>
             <img src="./images/Paypay.jpg" alt="PayPay" width="100">
-        </label>
-        <label>
-            <input type="radio" name="payment" value="RPay" required>
-            <img src="./images/rpay.png" alt="RPay" width="100">
         </label>
     </fieldset>
         <br><br>
