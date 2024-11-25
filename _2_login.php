@@ -22,5 +22,8 @@
         </form>
         <p><a href="./_1_newuser.php">新規登録はこちら</a></p>
     </div>
+    <?php if (!empty($error_message)): ?>
+        <p style="color:red;"><?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?></p>
+    <?php endif; ?>
 </body>
 </html>
