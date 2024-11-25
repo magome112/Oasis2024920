@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,6 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/stylesheet_2.css">
     <title>ログイン</title>
+
+    <script>
+        // セッションにエラーメッセージがある場合、alertを表示
+        <?php if (isset($_SESSION['error_msg'])): ?>
+            alert("<?php echo htmlspecialchars($_SESSION['error_msg'], ENT_QUOTES, 'UTF-8'); ?>");
+            <?php unset($_SESSION['error_msg']); // エラーメッセージを表示後にセッションから削除 ?>
+        <?php endif; ?>
+    </script>
 </head>
 <body>
     <div class="login-container">
@@ -22,8 +33,5 @@
         </form>
         <p><a href="./_1_newuser.php">新規登録はこちら</a></p>
     </div>
-    <?php if (!empty($error_message)): ?>
-        <p style="color:red;"><?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?></p>
-    <?php endif; ?>
 </body>
 </html>
