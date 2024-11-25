@@ -91,9 +91,6 @@ $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>画像アップロードとアイコン表示</h1>
-
         <!-- アップロードフォーム -->
         <div class="upload-form">
             <form action="" method="post" enctype="multipart/form-data">
