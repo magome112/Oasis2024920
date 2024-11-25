@@ -28,7 +28,7 @@ if (!is_dir($uploadFileDir)) {
 <body>
     <div class="container">
         <div style="text-align: left;">
-            <img src="./images/aikon.png" width="150" height="75">
+            <img src="./images/aikon.png" width="250" height="100">
             <form action="" method="post" enctype="multipart/form-data">
                 <label for="file">画像を選択:</label>
                 <input type="file" name="file" id="file" accept="image/*">
