@@ -9,7 +9,7 @@ session_start();
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //データ取得
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
+        $pass = $_POST['password'];
 
         //データベースから値を取得
         $stmt = $pdo->prepare("SELECT * FROM Oasis_user WHERE u_mail = :email");
@@ -22,12 +22,14 @@ session_start();
             $_SESSION['user_id'] = $user['u_id'];
             $_SESSION['user_name'] = $user['u_name'];
 
-            // ホーム画面にリダイレクト
+        // ホーム画面にリダイレクト
         header('Location: _3_home.php');
         exit();
         } else {
             //エラーメッセージ
-            $error_msg = "メールアドレスまたはパスワードが正しくありません。";
+            $_SESSION['error_msg'] = "メールアドレスまたはパスワードが正しくありません。";
+            header('Location: _2_login.php');
+            exit();
         }     
     }      
 ?>
