@@ -107,7 +107,7 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
 
         <!-- First Item -->
         <div class="history-item">
-            <img src="volcano.jpg" alt="Volcano">
+            <img src="sakurajimajpg" alt="Sakurajima">
             <div class="history-details">
                 <div class="purchase-info">
                     <span class="label">購入日:</span> ○○月××日<br>
@@ -119,7 +119,7 @@ $redirectUrl = "https://aso2301032.girlfriend.jp/Oasis2024920/_3_home.php";
 
         <!-- Second Item -->
         <div class="history-item">
-            <img src="mountain.jpg" alt="Mountain">
+            <img src="hujisan.jpg" alt="Hujisan">
             <div class="history-details">
                 <div class="purchase-info">
                     <span class="label">購入日:</span> ○○月××日<br>
