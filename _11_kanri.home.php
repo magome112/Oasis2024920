@@ -1,13 +1,16 @@
-// データベース接続情報
 <?php
+//データベース接続情報
 $host = 'localhost';
-$dbname = 'ecommerce';
+$dbname = 'LAA1553845-2024php';
 $username = 'LAA1553845';
 $password = 'pass1234';
 
+
 // データベースに接続
-$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+dbname=LAA1602729-oasis;charset=utf8',
+'LAA1602729',
+'oasis5');
 
 $uploadFileDir = './uploaded_files/';
 if (!is_dir($uploadFileDir)) {
