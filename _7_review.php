@@ -1,14 +1,14 @@
 <?php
-// データベースからレビュー情報を取得
+// データベース接続
 try {
     $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;dbname=LAA1602729-oasis;charset=utf8', 'LAA1602729', 'oasis5');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // レビュー情報を取得
-    $stmt = $pdo->query("SELECT * FROM Oasis_review ORDER BY review_id DESC");
+    $stmt = $pdo->query("SELECT * FROM Oasis_review ORDER BY created_at DESC");
     $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-} catch (Exception $e) {
+} catch (PDOException $e) {
     die("エラー: " . $e->getMessage());
 }
 ?>
@@ -38,6 +38,7 @@ try {
 
         header img {
             height: 40px;
+            margin: auto; /* ロゴを中央揃え */
         }
 
         header input[type="search"] {
@@ -110,7 +111,7 @@ try {
 <header>
     <input type="search" placeholder="検索">
     <img src="./images/oasislogo.jpg" alt="Oasis ロゴ">
-    <div class="login">ログイン</div>
+    
 </header>
 
 <div class="container">
