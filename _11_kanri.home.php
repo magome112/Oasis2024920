@@ -108,11 +108,6 @@ $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
             <p style="color: red;"><?php echo $uploadError; ?></p>
         <?php endif; ?>
 
-        <!-- デフォルトアイコンとアップロード画像の表示 -->
-        <div class="icons">
-            <!-- デフォルトアイコン -->
-            <img src="./images/default.png" alt="デフォルトアイコン" class="icon">
-
             <!-- アップロードされた画像をアイコンとして表示 -->
             <?php foreach ($uploadedImages as $image): ?>
                 <img src="<?php echo $uploadDir . $image; ?>" alt="アップロードされた画像" class="icon">
