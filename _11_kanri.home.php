@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // ログインしていない場合、ログイン画面にリダイレクト
+    header('Location: _10_kanri.login.php');
+    exit();
+}
+?>
+<?php
 //データベース接続情報
 $host = 'localhost';
 $dbname = 'LAA1553845-2024php';
