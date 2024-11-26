@@ -35,6 +35,28 @@ if (!is_dir($uploadFileDir)) {
     <title>ホーム</title>
 </head>
 <body>
+<style>
+        .icon {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 10px;
+              }
+        .container {
+                text-align: left;
+                   }
+        .upload-form {
+                margin-top: 20px;
+                     }
+        .icons {
+                display: flex;
+                justify-content: flex-start; /* より適切なプロパティ値 */
+                flex-wrap: wrap;
+               }
+</style>
+</head>
+<body>
 <?php
 // アップロードされた画像を保存するディレクトリ
 $uploadDir = './uploads/';
@@ -66,6 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
         $uploadError = "許可されていないファイル形式です。";
     }
 }
+<<<<<<< HEAD
 
 // アップロードディレクトリ内の画像を取得
 $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
@@ -154,3 +177,5 @@ $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
     </div>
 </body>
 </html>
+=======
+>>>>>>> a1af4dce9c3ecea0d3fb52d617ace3a3b3b0f661
