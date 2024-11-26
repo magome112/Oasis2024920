@@ -70,15 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 // アップロードディレクトリ内の画像を取得
 $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
 ?>
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stylesheet.css">
-    <title>画像アップロードとアイコン表示</title>
-    <style>
+<style>
         .icon {
             width: 100px;
             height: 100px;
@@ -87,14 +79,14 @@ $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
             margin: 10px;
         }
         .container {
-            text-align: center;
+            text-align: reft;
         }
         .upload-form {
             margin-top: 20px;
         }
         .icons {
             display: flex;
-            justify-content: center;
+            justify-content: reft;
             flex-wrap: wrap;
         }
     </style>
