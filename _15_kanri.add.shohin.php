@@ -17,7 +17,25 @@
 <body>
     <h2>商品追加</h2>
         <form action="./_12_kanri.shohin.php" method="post" enctype="multipart/form-data">
-            
+            <input type="file" name="product_img[]" id="product_img" multiple accept="image/*">
+            <br>
+            <label for="country_category" id="country_category">国/地域
+                <select name="country">
+                    <option value="日本">日本</option>
+                    <option value="アメリカ">アメリカ</option>
+                    <option value="イギリス">イギリス</option>
+                    <option value="カナダ">カナダ</option>
+                    <option value="オーストラリア">オーストラリア</option>
+                </select></label>
+                <br>
+                <label class="form_data">
+                    <input type="text" name="country_name"></label>
+                <br>
+                <label class="form_data">
+                    <input type="text" name="price"></label>
+                <br>
+                <label class="form_data">
+                    <textarea name="detail" rows="4" cols="30"></textarea></label>
         </form>
 </body>
 </html>
