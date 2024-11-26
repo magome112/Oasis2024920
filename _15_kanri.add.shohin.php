@@ -1,12 +1,23 @@
 <?php
-// データベース接続情報
-$host = 'localhost';
-$dbname = 'ecommerce';
-$username = 'LAA1553845';
-$password = 'pass1234';
+        $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;
+        dbname=LAA1602729-oasis;charset=utf8',
+        'LAA1602729',
+        'oasis5');
 
-
-    // データベースに接続
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>
+    
+    ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>商品追加</title>
+</head>
+<body>
+    <h2>商品追加</h2>
+        <form action="./_12_kanri.shohin.php" method="post" enctype="multipart/form-data">
+            
+        </form>
+</body>
+</html>
