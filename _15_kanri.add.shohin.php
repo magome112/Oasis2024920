@@ -28,14 +28,16 @@
                     <option value="オーストラリア">オーストラリア</option>
                 </select></label>
                 <br>
-                <label class="form_data">
+                <label class="form_data">山名
                     <input type="text" name="country_name"></label>
                 <br>
-                <label class="form_data">
+                <label class="form_data">金額
                     <input type="text" name="price"></label>
                 <br>
-                <label class="form_data">
+                <label class="form_data">詳細
                     <textarea name="detail" rows="4" cols="30"></textarea></label>
+                
+                    <input type="submit" value="商品を追加する">
         </form>
 </body>
 </html>
