@@ -46,7 +46,7 @@
                         <input type="text" name="country_price" placeholder="100,000,000">
                     </label>
                     <label for="country_detail">詳細
-                        <textarea rows="4" cols="30" name="country_detail" placeholder="日本最高峰の山">
+                        <textarea rows="4" cols="30" name="country_detail" placeholder="日本最高峰の山"></textarea>
                     </label>
                 </div>
                 <button type="submit" class="submit_btn">商品を追加する</button>
