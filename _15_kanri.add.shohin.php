@@ -55,11 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="sidebar">
         <h3>山崎 亮佑</h3>
         <a href="#">ダッシュボード</a>
-        <a href="#">商品追加</a>
-        <a href="#">商品削除</a>
-        <a href="#">ユーザー管理</a>
-        <a href="#">購入商品管理</a>
-        <a href="#">レンタル商品管理</a>
+        <a href="./_15_kanri.add.shohin.php">商品追加</a>
+        <a href="./_13_kanri.shohindel.php">商品削除</a>
+        <a href="./_14_kanri.user.php">ユーザー管理</a>
+        <a href="./_12_kanri.shohin.php">購入商品管理</a>
+        <a href="./_16_kanri.add.rental.php">レンタル商品管理</a>
         <a href="#">ログアウト</a>
     </div>
 
@@ -78,6 +78,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <label for="price">金額</label>
             <input type="number" name="price" id="price" placeholder="例：100000000" required>
+
+            <label for="classification">分類</label>
+            <input type="radio" name="domestic" id="domestic" required>
+            <input type="radio" name="abroad" id="abroad" required>
 
             <label for="details">詳細</label>
             <textarea name="details" id="details" placeholder="例：日本最高峰の山" rows="4" required></textarea>
