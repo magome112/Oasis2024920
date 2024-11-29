@@ -11,8 +11,12 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 // データベース接続（PDO）
-$pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;dbname=LAA1602729-oasis;charset=utf8', 'LAA1602729', 'oasis5');
-
+try{
+    $pdo = new PDO('mysql:host=mysql306.phy.lolipop.lan;dbname=LAA1602729-oasis;charset=utf8', 'LAA1602729', 'oasis5');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+    die('データベース接続失敗: '.$e->getMessage());
+}
 // 現在の日付を取得（レンタル開始日のデフォルトとして使用）
 $current_date = date('Y-m-d');
 
@@ -43,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $rental_finish = htmlspecialchars($_POST['rental_finish'], ENT_QUOTES, 'UTF-8');
 
         // レンタル情報をデータベースに登録
-        $sql = "INSERT INTO Oasis_rental (u_id, yama_id, purchaser_country, purchaser_u_name, u_address, u_tell, payment, rental_start, rental_finish, order_date, pay_confirmation_flag) 
+        $sql = "INSERT INTO Oasis_rental (u_id, yama_id, purchaser_country, purchaser_u_name, u_address, u_tell, payment, rental_start, rental_finish, order_date, pay_contirmation_flag) 
                 VALUES (:u_id, :yama_id, :purchaser_country, :purchaser_u_name, :u_address, :u_tell, :payment, :rental_start, :rental_finish, CURDATE(), 0)";
         
         $stmt = $pdo->prepare($sql);

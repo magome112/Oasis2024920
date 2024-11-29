@@ -16,13 +16,13 @@ try {
     // 購入情報を取得 (購入テーブルと山情報をJOIN)
     $purchaseSql = "
         SELECT 
-            p.purchaser_country, p.purchaser_user_name, p.u_address, p.payment, y.yama_name, y.yama_img, y.price
+            p.purchaser_country, p.purchaser_user_name, p.u_address, p.payment, p.yama_id, y.yama_name, y.yama_img, y.price
         FROM 
             Oasis_buy p
         INNER JOIN 
             Oasis_yama y ON p.yama_id = y.yama_id
         WHERE 
-            p.user_id = :user_id
+            p.u_id = :user_id
     ";
     $purchaseStmt = $pdo->prepare($purchaseSql);
     $purchaseStmt->bindParam(':user_id', $user_id);
@@ -33,7 +33,7 @@ try {
     $rentalSql = "
         SELECT 
             r.purchaser_country, r.purchaser_u_name, r.u_address, r.u_tell, r.payment, 
-            r.rental_start, r.rental_finish, y.yama_name, y.yama_img, y.dayprice
+            r.rental_start, r.rental_finish, r.yama_id, y.yama_name, y.yama_img, y.dayprice
         FROM 
             Oasis_rental r
         INNER JOIN 
@@ -83,6 +83,13 @@ try {
                     <td><?= htmlspecialchars($purchase['yama_name'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><img src="<?= htmlspecialchars($purchase['yama_img'], ENT_QUOTES, 'UTF-8') ?>" alt="山の画像" width="100"></td>
                     <td><?= htmlspecialchars($purchase['price'], ENT_QUOTES, 'UTF-8') ?>円</td>
+                    <td>
+                    <!-- レビューを書くボタン -->
+                        <form action="_6_addreview.php" method="POST">
+                            <input type="hidden" name="yama_id" value="<?= htmlspecialchars($purchase['yama_id'], ENT_QUOTES, 'UTF-8') ?>">
+                            <button type="submit">レビューを書く</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
@@ -127,6 +134,13 @@ try {
                     <td><?= htmlspecialchars($rental['yama_name'], ENT_QUOTES, 'UTF-8') ?></td>
                     <td><img src="<?= htmlspecialchars($rental['yama_img'], ENT_QUOTES, 'UTF-8') ?>" alt="山の画像" width="100"></td>
                     <td><?= number_format($rentalPrice) ?>円</td> <!-- 計算されたレンタル料金を表示 -->
+                    <td>
+                    <!-- レビューを書くボタン -->
+                        <form action="_6_addreview.php" method="POST">
+                            <input type="hidden" name="yama_id" value="<?= htmlspecialchars($rental['yama_id'], ENT_QUOTES, 'UTF-8') ?>">
+                            <button type="submit">レビューを書く</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
