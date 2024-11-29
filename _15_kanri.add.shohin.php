@@ -80,8 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="number" name="price" id="price" placeholder="例：100000000" required>
 
             <label for="classification">分類</label>
-            <input type="radio" name="domestic" id="domestic" required>
-            <input type="radio" name="abroad" id="abroad" required>
+            <input type="radio" name="domestic" id="domestic" required>国内
+            <input type="radio" name="abroad" id="abroad" required>海外
 
             <label for="details">詳細</label>
             <textarea name="details" id="details" placeholder="例：日本最高峰の山" rows="4" required></textarea>
