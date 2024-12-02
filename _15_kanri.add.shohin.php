@@ -51,12 +51,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet_3.css">
     <title>商品追加</title>
 </head>
 <body>
     <div class="sidebar">
         <h3>山崎 亮佑</h3>
-        <a href="#">ダッシュボード</a>
+        <a href="./_11_kanri.home.php">ダッシュボード</a>
         <a href="./_15_kanri.add.shohin.php">商品追加</a>
         <a href="./_13_kanri.shohindel.php">商品削除</a>
         <a href="./_14_kanri.user.php">ユーザー管理</a>
