@@ -55,15 +55,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>商品追加</title>
 </head>
 <body>
-    <div class="sidebar">
-        <h3>山崎 亮佑</h3>
-        <a href="./_11_kanri.home.php">ダッシュボード</a>
-        <a href="./_15_kanri.add.shohin.php">商品追加</a>
-        <a href="./_13_kanri.shohindel.php">商品削除</a>
-        <a href="./_14_kanri.user.php">ユーザー管理</a>
-        <a href="./_12_kanri.shohin.php">購入商品管理</a>
-        <a href="./_16_kanri.add.rental.php">レンタル商品管理</a>
-        <a href="#">ログアウト</a>
+    <div class="content">
+    <h1>ダッシュボード</h1>
+        <div class="dashboard-buttons">
+            <div class="button" style="background-color: #3498db;">
+                <a href="add_product.php">商品追加</a>
+            </div>
+            <div class="button" style="background-color: #2ecc71;">
+                <a href="delete_product.php">商品削除</a>
+            </div>
+            <div class="button" style="background-color: #f39c12;">
+                <a href="user_info.php">ユーザー情報</a>
+            </div>
+            <div class="button" style="background-color: #9b59b6;">
+                <a href="purchase_management.php">購入商品管理</a>
+            </div>
+            <div class="button" style="background-color: #e74c3c;">
+                <a href="rental_management.php">レンタル商品管理</a>
+            </div>
     </div>
 
     <div class="main-content">
