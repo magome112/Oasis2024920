@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // データベースに挿入
-    $stmt = $pdo->prepare("INSERT INTO products (region, mountain_name, price, details, image_path) VALUES (:region, :mountain_name, :price, :details, :image_path)");
+    $stmt = $pdo->prepare("INSERT INTO products (region, mountain_name, price, domestic, details, image_path) VALUES (:region, :mountain_name, :price, :details, :image_path)");
     $stmt->bindParam(':region', $region);
     $stmt->bindParam(':mountain_name', $mountain_name);
     $stmt->bindParam(':price', $price);
@@ -73,21 +73,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="France">France</option>
             </select>
 
-            <label for="mountain_name">山名</label>
-            <input type="text" name="mountain_name" id="mountain_name" placeholder="例：○○山" required>
+            <label for="mountain_name">山名
+            <input type="text" name="mountain_name" id="mountain_name" placeholder="例：○○山" required></label>
 
-            <label for="price">金額</label>
-            <input type="number" name="price" id="price" placeholder="例：100000000" required>
+            <label for="price">金額
+            <input type="number" name="price" id="price" placeholder="例：100000000" required></label>
 
-            <label for="classification">分類</label>
+            <label for="classification">分類
             <input type="radio" name="domestic" id="domestic" required>国内
-            <input type="radio" name="abroad" id="abroad" required>海外
+            <input type="radio" name="abroad" id="abroad">海外
+            </label>
 
-            <label for="details">詳細</label>
+            <label for="details">詳細
             <textarea name="details" id="details" placeholder="例：日本最高峰の山" rows="4" required></textarea>
+            </label>
 
-            <label for="image">画像</label>
+            <label for="image">画像
             <input type="file" name="image" id="image" accept="image/*" required>
+            </label>
 
             <button type="submit">商品を追加する</button>
         </form>

@@ -88,7 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
         $uploadError = "許可されていないファイル形式です。";
     }
 }
-<<<<<<< HEAD
 
 // アップロードディレクトリ内の画像を取得
 $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
@@ -177,5 +176,3 @@ $uploadedImages = array_diff(scandir($uploadDir), ['.', '..']);
     </div>
 </body>
 </html>
-=======
->>>>>>> a1af4dce9c3ecea0d3fb52d617ace3a3b3b0f661
