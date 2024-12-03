@@ -1,133 +1,93 @@
+<?php
+// データベース接続設定
+$host = 'mysql306.phy.lolipop.lan';
+$dbname = 'LAA1602729-oasis';
+$user = 'LAA1602729';
+$password = 'oasis5';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "データベース接続エラー: " . $e->getMessage();
+    exit;
+}
+
+// フォーム送信処理
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $region = $_POST['region'] ?? '';
+    $mountain_name = $_POST['mountain_name'] ?? '';
+    $price = $_POST['price'] ?? '';
+    $details = $_POST['details'] ?? '';
+    $image_path = '';
+
+    // 画像のアップロード処理
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $upload_dir = 'uploads/';
+        $image_path = $upload_dir . basename($_FILES['image']['name']);
+        if (!move_uploaded_file($_FILES['image']['tmp_name'], $image_path)) {
+            echo "画像アップロードに失敗しました。";
+            exit;
+        }
+    }
+
+    // データベースに挿入
+    $stmt = $pdo->prepare("INSERT INTO products (region, mountain_name, price, details, image_path) VALUES (:region, :mountain_name, :price, :details, :image_path)");
+    $stmt->bindParam(':region', $region);
+    $stmt->bindParam(':mountain_name', $mountain_name);
+    $stmt->bindParam(':price', $price);
+    $stmt->bindParam(':details', $details);
+    $stmt->bindParam(':image_path', $image_path);
+    $stmt->execute();
+
+    echo "商品が追加されました！";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理者ダッシュボード</title>
-    <style>a
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: #2c3e50;
-            color: white;
-            height: 100vh;
-            position: fixed;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .profile {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .profile img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: white;
-            margin-bottom: 10px;
-        }
-        .profile h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-        .menu {
-            width: 100%;
-        }
-        .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .menu ul li {
-            margin: 15px 0;
-        }
-        .menu ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            border-radius: 5px;
-        }
-        .menu ul li a:hover {
-            background-color: #34495e;
-        }
-        .logout {
-            margin-top: auto;
-            text-align: center;
-        }
-        .logout a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #e74c3c;
-        }
-        .logout a:hover {
-            background-color: #c0392b;
-        }
-        .main {
-            margin-left: 250px;
-            padding: 20px;
-        }
-        .dashboard-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .dashboard-grid .card {
-            background-color: #f5f5f5;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            text-align: center;
-            padding: 20px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        .dashboard-grid .card:hover {
-            background-color: #eaeaea;
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="./css/stylesheet_sidebar.css">
+    <title>商品追加</title>
 </head>
 <body>
     <div class="sidebar">
-        <div class="profile">
-            <img src="#" alt="Profile Icon">
-            <h3>山崎 亮佑</h3>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">ダッシュボード</a></li>
-                <li><a href="#">商品追加</a></li>
-                <li><a href="#">商品削除</a></li>
-                <li><a href="#">ユーザー管理</a></li>
-                <li><a href="#">購入商品管理</a></li>
-                <li><a href="#">レンタル商品管理</a></li>
-            </ul>
-        </div>
-        <div class="logout">
-            <a href="#">ログアウト</a>
-        </div>
+        <h3>山崎 亮佑</h3>
+        <a href="./_11_kanri.home.php">ダッシュボード</a>
+        <a href="./_15_kanri.add.shohin.php">商品追加</a>
+        <a href="./_13_kanri.shohindel.php">商品削除</a>
+        <a href="./_14_kanri.user.php">ユーザー管理</a>
+        <a href="./_15_kanri.add.shohin.php">購入商品管理</a>
+        <a href="./_16_kanri.add.rental.php">レンタル商品管理</a>
+        <a href="#">ログアウト</a>
     </div>
-    <div class="main">
-        <div class="dashboard-title">ダッシュボード</div>
-        <div class="dashboard-grid">
-            <div class="card">商品追加</div>
-            <div class="card">商品削除</div>
-            <div class="card">ユーザー情報</div>
-            <div class="card">購入商品管理</div>
-            <div class="card">レンタル商品管理</div>
-        </div>
+
+    <div class="main-content">
+        <h1>商品追加</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="region">国/地域</label>
+            <select name="region" id="region">
+                <option value="Japan">Japan</option>
+                <option value="USA">USA</option>
+                <option value="France">France</option>
+            </select>
+
+            <label for="mountain_name">山名</label>
+            <input type="text" name="mountain_name" id="mountain_name" placeholder="例：○○山" required>
+
+            <label for="price">金額</label>
+            <input type="number" name="price" id="price" placeholder="例：100000000" required>
+
+            <label for="details">詳細</label>
+            <textarea name="details" id="details" placeholder="例：日本最高峰の山" rows="4" required></textarea>
+
+            <label for="image">画像</label>
+            <input type="file" name="image" id="image" accept="image/*" required>
+
+            <button type="submit">商品を追加する</button>
+        </form>
     </div>
 </body>
 </html>

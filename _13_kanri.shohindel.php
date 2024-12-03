@@ -35,97 +35,19 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet_sidebar.css">
     <title>商品一覧</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #2c3e50;
-            color: #fff;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .sidebar h3 {
-            margin-bottom: 30px;
-        }
-        .sidebar a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 15px;
-        }
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
-        .main-content {
-            margin-left: 220px;
-            padding: 20px;
-            background-color: #fff;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table th, .table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        .table th {
-            background-color: #2c3e50;
-            color: #fff;
-        }
-        .search-box {
-            margin-bottom: 20px;
-        }
-        .search-box input[type="text"] {
-            padding: 8px;
-            width: 300px;
-        }
-        .search-box button {
-            padding: 8px 15px;
-            background-color: #2c3e50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        .search-box button:hover {
-            background-color: #34495e;
-        }
-        .delete-button {
-            padding: 8px 15px;
-            background-color: #e74c3c;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        .delete-button:hover {
-            background-color: #c0392b;
-        }
-    </style>
 </head>
 <body>
     <!-- サイドバー -->
     <div class="sidebar">
         <h3>山崎 亮佑</h3>
-        <a href="#">ダッシュボード</a>
-        <a href="#">商品追加</a>
-        <a href="#">商品削除</a>
-        <a href="#">ユーザー管理</a>
-        <a href="#">購入商品管理</a>
-        <a href="#">レンタル商品管理</a>
+        <a href="./_11_kanri.home.php">ダッシュボード</a>
+        <a href="./_15_kanri.add.shohin.php">商品追加</a>
+        <a href="./_13_kanri.shohindel.php">商品削除</a>
+        <a href="./_14_kanri.user.php">ユーザー管理</a>
+        <a href="./_15_kanri.add.shohin.php">購入商品管理</a>
+        <a href="./_16_kanri.add.rental.php">レンタル商品管理</a>
         <a href="#">ログアウト</a>
     </div>
 
@@ -137,7 +59,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <input type="text" placeholder="商品名・国名など">
                 <button type="button">検索</button>
             </div>
-            <table class="table">
+            <table>
                 <thead>
                     <tr>
                         <th><input type="checkbox" id="select-all"></th>
@@ -159,7 +81,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <?php endforeach; ?>
                 </tbody>
             </table>
-            <button type="submit" name="delete" class="delete-button">削除</button>
+            <button type="submit" name="delete">削除</button>
         </form>
     </div>
 
@@ -174,4 +96,3 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </script>
 </body>
 </html>
-
